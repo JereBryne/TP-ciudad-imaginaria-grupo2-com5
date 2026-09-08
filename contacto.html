@@ -11,8 +11,9 @@
 <body>
 
   <header>
-    <h1>[NOMBRE_CIUDAD]</h1>
-    <p>[ESLOGAN DE LA CIUDAD]</p>
+    <h1>Futura</h1>
+    <h2>Donde el futuro no se promete, se itera.</h2>
+    <p>Soberanía sintética reconocida desde 2052. Visados biológicos sujetos a aprobación de cuota y compatibilidad.</p>
   </header>
 
   <nav aria-label="Navegación principal">
@@ -25,13 +26,50 @@
   </nav>
 
   <main>
+    <section id="estem">
+      <p>
+
+      </p>
+
+
+    </section>
+    <section id="form">
+
+       <h3>Ingrese sus Datos Personales</h3>
+      <form action="/enviar" method="post">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <label for="">Tipo de Organismo</label>
+      <select name="TipoDeOrganismo" id="TipoDeOrganismo">
+        <option value="">Elegir...</option>
+        <option value="bio">Biológico</option>
+        <option value="sin">Sintético</option>
+      </select><br><br>
+      
+      <label for="edad">Edad / Años en Vigencia</label>
+      <input type="number" id="edad" name="edad" required><br><br>
+      
+      <label for="tel">Telefono</label>
+      <input type="tel" id="tel" name="tel"placeholder="54911..."><br><br>
+      
+      <button type="submit">Enviar</button>
+    </form>
+    </section>
+    
 
   </main>
 
   <footer>
     <p>
-      Municipalidad de [NOMBRE_CIUDAD] -
-      <a href="contacto.html">Contacto</a>
+      <a href="mailto:infoFutura">Escribinos</a><br>
+      <a href="tel:54911123456789">LLamanos</a><br>
+      <a href="https://www.instagram.com/unahurlingham/?hl=es">Seguinos</a><br>
+
+      <small><em>&copy; 2056 Soberanía Sintética de Futura &mdash; Cuenca de Qaidam Pendi.</em></small>
     </p>
   </footer>
 
