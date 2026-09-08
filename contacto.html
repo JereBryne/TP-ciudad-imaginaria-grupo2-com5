@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Información de contacto y turismo de [NOMBRE_CIUDAD]." />
-  <title>Contacto | [NOMBRE_CIUDAD]</title>
+  <title>Contacto | Futura</title>
 </head>
 
 <body>
@@ -26,26 +26,26 @@
   </nav>
 
   <main>
-    <section id="estem">
+    <section id="parrafo">
+      <hr>
+      <h3>Nosotros</h3>
       <p>
-
-      </p>
-
-
+        Si usted desea visitarnos puede ver nuestra <a href="https://www.google.com/maps/search/futura/@-34.5464978,-58.831135,12z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"target="_blank">ubicación</a> en el mapa, en caso de querer residir permanentemente debe llenar y envíar el formulario a continuación.<br>Lo esperamos con los brazos abiertos.
+      </p><br>
     </section>
     <section id="form">
-
-       <h3>Ingrese sus Datos Personales</h3>
+      <hr>
+       <h3>Ingrese sus datos personales</h3>
       <form action="/enviar" method="post">
-      <label for="nombre">Nombre</label>
+      <label for="nombre">Nombre Completo</label>
       <input type="text" id="nombre" name="nombre" required><br><br>
       
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required><br><br>
+      <label for="estadoCivil">Estado Civil</label>
+      <input type="text" id="estadoCivil" name="estadoCivil" required><br><br>
       
-      <label for="">Tipo de Organismo</label>
+      <label for="TipoDeOrganismo">Tipo de Organismo</label>
       <select name="TipoDeOrganismo" id="TipoDeOrganismo">
-        <option value="">Elegir...</option>
+        <option value="">Elegír...</option>
         <option value="bio">Biológico</option>
         <option value="sin">Sintético</option>
       </select><br><br>
@@ -53,10 +53,16 @@
       <label for="edad">Edad / Años en Vigencia</label>
       <input type="number" id="edad" name="edad" required><br><br>
       
-      <label for="tel">Telefono</label>
+      <label for="tel">Teléfono</label>
       <input type="tel" id="tel" name="tel"placeholder="54911..."><br><br>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="TuMail@gmail.com"><br><br>
       
-      <button type="submit">Enviar</button>
+      <label for="razon">Mensaje ( no es necesario )</label><br>
+      <textarea name="razon" id="razon" rows="3" placeholder="¿Porqué querés vivir acá?"></textarea>
+      <br><br>
+      <button type="submit">Envíar</button>
     </form>
     </section>
     
@@ -64,10 +70,11 @@
   </main>
 
   <footer>
+    <hr>
     <p>
-      <a href="mailto:infoFutura">Escribinos</a><br>
+      <a href="mailto:infoFutura@yahoo.com">Escribinos</a><br>
       <a href="tel:54911123456789">LLamanos</a><br>
-      <a href="https://www.instagram.com/unahurlingham/?hl=es">Seguinos</a><br>
+      <a href="https://www.instagram.com/unahurlingham/?hl=es "target="_blank">Seguinos</a><br><br>
 
       <small><em>&copy; 2056 Soberanía Sintética de Futura &mdash; Cuenca de Qaidam Pendi.</em></small>
     </p>
