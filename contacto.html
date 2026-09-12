@@ -2,9 +2,9 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Información de contacto y turismo de [NOMBRE_CIUDAD]." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Información de contacto y turismo de Futura.">
   <title>Contacto | Futura</title>
 </head>
 
@@ -14,28 +14,30 @@
     <h1>Futura</h1>
     <h2>Donde el futuro no se promete, se itera.</h2>
     <p>Soberanía sintética reconocida desde 2052. Visados biológicos sujetos a aprobación de cuota y compatibilidad.</p>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="ciudad.html">La Ciudad</a></li>
+        <li><a href="lugares.html">Lugares de Interés</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav aria-label="Navegación principal">
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="ciudad.html">La Ciudad</a></li>
-      <li><a href="lugares.html">Lugares de Interés</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
+
 
   <main>
       <hr>
-      <br>
-      
-      <p>
-        Si usted desea visitarnos y ver nuestros <a href="lugares.html">lugares de interés</a>, debe llenar y envíar el formulario a continuación.<br>Lo esperamos con los brazos abiertos.
-      </p>
-      <br>
 
-    <section id="form">
-      <hr>
+      <section id="visados">
+      <h2>Visados Biológicos</h2>
+      <p>
+        Si usted desea visitarnos y ver nuestros <a href="lugares.html">lugares de interés</a>, <strong>debe llenar y envíar el formulario a continuación.</strong><br>Lo esperamos con los brazos abiertos.
+      </p>
+      </section>
+
+    <section id="formulario">
+
        <h3>Ingrese sus datos personales</h3><br>
       <form action="/enviar" method="post">
       <label for="nombre">Nombre Completo</label>
@@ -45,13 +47,13 @@
       <input type="text" id="estadoCivil" name="estadoCivil" required><br><br>
       
       <label for="DNI">DNI</label>
-      <input type="text" id="DNI" name="DNI"required placeholder="12345678"><br><br>
+      <input type="text" id="DNI" name="DNI" required placeholder="12345678"><br><br>
       
       <label for="edad">Edad</label>
       <input type="number" id="edad" name="edad" required><br><br>
       
       <label for="tel">Teléfono</label>
-      <input type="tel" id="tel" name="tel"placeholder="54911..."><br><br>
+      <input type="tel" id="tel" name="tel" placeholder="54911..." required><br><br>
 
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required placeholder="TuMail@gmail.com"><br><br>
@@ -72,10 +74,12 @@
     <p>
       <a href="mailto:infoFutura@yahoo.com">Escribinos</a><br>
       <a href="tel:54911123456789">LLamanos</a><br>
-      <a href="https://www.instagram.com/unahurlingham/?hl=es "target="_blank">Seguinos</a><br><br>
-
-      <small><em>&copy; 2056 Soberanía Sintética de Futura &mdash; Cuenca de Qaidam Pendi.</em></small>
-    </p>
+      <a href="https://www.instagram.com/unahurlingham/?hl=es " target="_blank">Seguinos</a><br><br>
+        
+      Coordinado por el Nodo Matriz Mother-0 <br><br>
+      <em>&copy; 2056 Soberanía Sintética de Futura &mdash; Cuenca de Qaidam Pendi.</em>
+    </p><br>
+    <small><em>"Donde el futuro no se promete, se itera."</em></small>
   </footer>
 
 </body>
