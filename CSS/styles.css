@@ -1,0 +1,22 @@
+:root {
+    --color-fuente: #222222;
+    --color-primario: #3F72AF;
+    --color-secundario: #DBE2EF;
+    --color-fondo: #F9F7F7;
+    --fuente: "Inter", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--color-fuente);
+    font-family: var(--fuente);
+    font-size: 16px;
+    background-color: var(--color-fondo);
+    margin: 0 auto;
+    padding: 0;
+}
