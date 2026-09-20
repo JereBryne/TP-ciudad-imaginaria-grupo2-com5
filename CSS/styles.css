@@ -28,11 +28,11 @@ section {
 
 aside {
     margin: 15px;
-    border-radius: 10px;
-    border-style:groove;
+    border-radius: 10px; /*Redondea los bordes de la box */
+    border-style:groove; /*Agrega las lineas al rededor de la box */
 }
 
-/* Contenedor padre de las cajas */
+
 #resumen_lugares {
     display: flex;
     flex-wrap: wrap;       /* Permite que bajen si la pantalla es chica */
@@ -45,7 +45,6 @@ aside {
 }
 
 .lugares_index {
-    min-width: 300px;
     border-radius: 5px;
     margin: 10px;
     padding: 10px;
