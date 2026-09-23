@@ -50,7 +50,6 @@ aside {
     padding: 10px;
     border-style: groove;
     text-align: center;
-    display: flexbox;
     flex: 1;
     min-width: 300px;
 }
