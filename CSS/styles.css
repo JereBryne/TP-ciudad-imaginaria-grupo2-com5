@@ -1,0 +1,60 @@
+:root {
+    --color-fuente-oscuro: #0F172A;
+    --color-primario: #2563EB;
+    --color-secundario: #DBE2EF;
+    --color-fondo: #F9F7F7;
+    --fuente: "Inter", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--color-fuente-oscuro);
+    font-family: var(--fuente);
+    font-size: 16px;
+    background-color: var(--color-fondo);
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*Prueba en Index.html */
+section {
+    margin-bottom: 20px;
+}
+
+aside {
+    margin: 15px;
+    border-radius: 10px; /*Redondea los bordes de la box */
+    border-style:groove; /*Agrega las lineas al rededor de la box */
+}
+
+
+#resumen_lugares {
+    display: flex;
+    flex-wrap: wrap;       /* Permite que bajen si la pantalla es chica */
+    justify-content: space-around; /* Separa las cajas uniformemente */
+}
+
+/* El título ocupa el 100% del ancho para quedar arriba */
+#resumen_lugares h2 {
+    width: 100%;
+}
+
+.lugares_index {
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    border-style: groove;
+    text-align: center;
+    flex: 1;
+    min-width: 300px;
+}
+
+#contactanos {
+    color: var(--color-fuente-oscuro);
+    background-color: var(--color-secundario);
+}
