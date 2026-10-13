@@ -1,97 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Información de contacto y turismo de Futura."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <title>Contacto | Futura</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Información de contacto y turismo de Futura.">
-  <link rel="stylesheet" href="CSS/styles.css">
-  <title>Contacto | Futura</title>
-</head>
-
-<body>
-  <header>
-    <h1>Futura</h1>
-    <h2>Donde el futuro no se promete, se itera.</h2>
-    <p>Soberanía sintética reconocida desde 2052. Visados biológicos sujetos a aprobación de cuota y compatibilidad.</p>
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="ciudad.html">La Ciudad</a></li>
-        <li><a href="lugares.html">Lugares de Interés</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
-
-  <main>
-    <hr>
-    <section id="visados">
-      <h2>Visados Biológicos</h2>
+  <body>
+    <header>
+      <h1>Futura</h1>
+      <h2>Donde el futuro no se promete, se itera.</h2>
       <p>
-        Si usted desea visitarnos y ver nuestros <a href="lugares.html">lugares de interés</a>,<strong> debe llenar y envíar el formulario a continuación.</strong><br>Lo esperamos con los brazos abiertos.
+        Soberanía sintética reconocida desde 2052. Visados biológicos sujetos a
+        aprobación de cuota y compatibilidad.
       </p>
-    </section>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="ciudad.html">La Ciudad</a></li>
+          <li><a href="lugares.html">Lugares de Interés</a></li>
+          <li><a href="eventos.html">Eventos de la ciudad</a></li>
+          <li><a href="contacto.html" class="activo">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <section id="formulario">
-      <h3>Ingrese sus datos personales</h3>
-      <br>
-      <form action="/enviar" method="post">
-      <label for="nombre">Nombre Completo</label>
-      <input type="text" id="nombre" name="nombre" required><br>
-      
-      <label for="estadoCivil">Estado Civil</label>
-      <input type="text" id="estadoCivil" name="estadoCivil" required><br>
-      
-      <label for="DNI">DNI</label>
-      <input type="text" id="DNI" name="DNI" required placeholder="12345678"><br>
-      
-      <label for="edad">Edad</label>
-      <input type="number" id="edad" name="edad" required><br>
-      
-      <label for="tel">Teléfono</label>
-      <input type="tel" id="tel" name="tel" placeholder="54911..." required><br>
+    <main>
+      <hr />
+      <section id="visados">
+        <h2>Visados Biológicos</h2>
+        <p>
+          Si usted desea visitarnos y ver nuestros
+          <a href="lugares.html">lugares de interés</a>,<strong>
+            debe llenar y envíar el formulario a continuación.</strong
+          ><br />Lo esperamos con los brazos abiertos.
+        </p>
+      </section>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required placeholder="TuMail@gmail.com"><br>
-      
-      <label for="razon">Razon de la visita / residencia</label><br>
-      <textarea name="razon" id="razon" rows="3" placeholder="¿Por qué querés venir acá?"></textarea>
-      <br><br>
-      <button type="submit">Envíar</button>
-    </form>
-    </section>
-  </main>
+      <section id="formulario">
+        <h3>Ingrese sus datos personales</h3>
+        <br />
+        <form action="/enviar" method="post">
+          <label for="nombre">Nombre Completo</label>
+          <input type="text" id="nombre" name="nombre" required /><br />
 
-  <footer>
-    <hr>
-    <h3>Nosotros</h3>
-    <address id="contactanos">
-      <a href="mailto:infoFutura@yahoo.com">Escribinos</a><br>
-      <a href="tel:54911123456789">LLamanos</a><br>
-      <a href="https://www.instagram.com/unahurlingham/?hl=es" target="_blank">Seguinos</a><br>
-        
-      Coordinado por el Nodo Matriz Mother-0 <br>
-      <em>&copy; 2056 Soberanía Sintética de Futura &mdash; Cuenca de Qaidam Pendi.</em>
-      <br>
-      <small><em>"Donde el futuro no se promete, se itera."</em></small>
-    <address id="contactanos">
-      <a href="mailto:infoFutura@yahoo.com">Escribinos</a><br>
-      <a href="tel:54911123456789">LLamanos</a><br>
-      <a href="https://www.instagram.com/unahurlingham/?hl=es" target="_blank">Seguinos</a>
-    </address>
-    <p>
-      &copy; 2056 Soberanía Sintética de Futura &mdash; Cuenca de Qaidam Pendi.
-    </p>
-    <p>
-      Coordinado por el Nodo Matriz Mother-0 &bull;
-      <a href="contacto.html">Contacto y Visados Biológicos</a>
-    </p>
-    <p>
-      <small><em>"Donde el futuro no se promete, se itera."</em></small>
-    </p>
-  </footer>
-</body>
+          <label for="estadoCivil">Estado Civil</label>
+          <input
+            type="text"
+            id="estadoCivil"
+            name="estadoCivil"
+            required
+          /><br />
 
+          <label for="DNI">DNI</label>
+          <input
+            type="text"
+            id="DNI"
+            name="DNI"
+            required
+            placeholder="12345678"
+          /><br />
+
+          <label for="edad">Edad</label>
+          <input type="number" id="edad" name="edad" required /><br />
+
+          <label for="tel">Teléfono</label>
+          <input
+            type="tel"
+            id="tel"
+            name="tel"
+            placeholder="54911..."
+            required
+          /><br />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="TuMail@gmail.com"
+          /><br />
+
+          <label for="razon">Razon de la visita / residencia</label><br />
+          <textarea
+            name="razon"
+            id="razon"
+            rows="3"
+            placeholder="¿Por qué querés venir acá?"
+          ></textarea>
+          <br /><br />
+          <button type="submit">Envíar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <h3>Contacto y Redes</h3>
+
+      <address id="contactanos">
+        <a href="mailto:infoFutura@yahoo.com">Escribinos</a><br />
+        <a href="tel:54911123456789">Llamanos</a><br />
+        <a
+          href="https://www.instagram.com/unahurlingham/?hl=es"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Seguinos</a
+        >
+      </address>
+
+      <p>
+        Coordinado por el Nodo Matriz Mother-0 &bull;
+        <a href="contacto.html">Contacto y Visados Biológicos</a>
+      </p>
+
+      <p>
+        &copy; 2056 Soberanía Sintética de Futura &mdash; Cuenca de Qaidam
+        Pendi.
+      </p>
+
+      <p>
+        <small><em>"Donde el futuro no se promete, se itera."</em></small>
+      </p>
+    </footer>
+  </body>
 </html>
