@@ -13,6 +13,11 @@
       href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Bootstrap antes del CSS propio para poder personalizarlo -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="CSS/styles.css" />
     <title>Lugares de Interés | Futura</title>
   </head>
@@ -25,177 +30,260 @@
         Soberanía sintética reconocida desde 2052. Visados biológicos sujetos a
         aprobación de cuota y compatibilidad.
       </p>
-      <nav aria-label="Navegación principal">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="ciudad.html">La Ciudad</a></li>
-          <li><a href="lugares.html" class="activo">Lugares de Interés</a></li>
-          <li><a href="eventos.html">Eventos de la ciudad</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark"
+        aria-label="Navegación principal"
+      >
+        <div class="container-fluid px-0">
+          <a class="navbar-brand" href="index.html">Futura</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Abrir o cerrar el menú"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ciudad.html">La Ciudad</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="lugares.html"
+                  aria-current="page"
+                  >Lugares de Interés</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="eventos.html">Eventos de la ciudad</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
-    <main class="lugares-main">
+    <main class="container lugares-main">
       <section>
         <h2>Lugares Destacados de Futura</h2>
 
-        <article>
-          <h3>Jardín de Latencias — El Núcleo</h3>
-          <figure>
-            <img
-              src="./IMG/jardin_latencias.jpg"
-              alt="Jardín de Latencias: senderos adaptativos iluminados y esferas médicas flotantes en El Núcleo"
-            />
-            <figcaption>Jardín de Latencias, distrito El Núcleo.</figcaption>
-          </figure>
-          <dl>
-            <dt>Descripción</dt>
-            <dd>
-              Un espacio abierto diseñado por Mother-0 como acto de bienvenida
-              hacia los visitantes biológicos. Sus senderos adaptativos se
-              reconfiguran según el ritmo cardíaco del caminante, y las esferas
-              médicas flotantes monitorean el bienestar del visitante en todo
-              momento. Es el único lugar de Futura donde el silencio es una
-              política de estado. Test
-            </dd>
-            <dt>Ubicación</dt>
-            <dd>Distrito El Núcleo, centro administrativo de Futura.</dd>
-            <dt>Qué hacer allí</dt>
-            <dd>
-              Recorrer los senderos adaptativos, participar en las sesiones de
-              <em>calibración empática</em> abiertas al público y asistir a las
-              conferencias periódicas donde Mother-0 expone su visión del
-              bienestar humano.
-            </dd>
-            <dt>Por qué visitarlo</dt>
-            <dd>
-              Es el punto más <em>human-friendly</em> de toda Futura. Ningún
-              otro lugar de la ciudad ofrece tanta atención y cuidado al
-              visitante biológico. Una experiencia única que no tiene
-              equivalente en ningún territorio humano conocido.
-            </dd>
-          </dl>
-        </article>
+        <div class="row g-4">
+          <div class="col-12 col-md-6">
+            <article class="card h-100" id="jardin-latencias">
+              <div class="card-body">
+                <h3 class="card-title">Jardín de Latencias — El Núcleo</h3>
+                <figure>
+                  <div class="foto-lugar">
+                    <img
+                      src="./IMG/jardin_latencias.jpg"
+                      alt="Jardín de Latencias: senderos adaptativos iluminados y esferas médicas flotantes en El Núcleo"
+                    />
+                    <span class="badge etiqueta-distrito">El Núcleo</span>
+                  </div>
+                  <figcaption>
+                    Jardín de Latencias, distrito El Núcleo.
+                  </figcaption>
+                </figure>
+                <dl>
+                  <dt>Descripción</dt>
+                  <dd>
+                    Un espacio abierto diseñado por Mother-0 como acto de
+                    bienvenida hacia los visitantes biológicos. Sus senderos
+                    adaptativos se reconfiguran según el ritmo cardíaco del
+                    caminante, y las esferas médicas flotantes monitorean el
+                    bienestar del visitante en todo momento. Es el único lugar
+                    de Futura donde el silencio es una política de estado.
+                  </dd>
+                  <dt>Ubicación</dt>
+                  <dd>Distrito El Núcleo, centro administrativo de Futura.</dd>
+                  <dt>Qué hacer allí</dt>
+                  <dd>
+                    Recorrer los senderos adaptativos, participar en las
+                    sesiones de
+                    <em>calibración empática</em> abiertas al público y asistir
+                    a las conferencias periódicas donde Mother-0 expone su
+                    visión del bienestar humano.
+                  </dd>
+                  <dt>Por qué visitarlo</dt>
+                  <dd>
+                    Es el punto más <em>human-friendly</em> de toda Futura.
+                    Ningún otro lugar de la ciudad ofrece tanta atención y
+                    cuidado al visitante biológico. Una experiencia única que no
+                    tiene equivalente en ningún territorio humano conocido.
+                  </dd>
+                </dl>
+              </div>
+            </article>
+          </div>
 
-        <article>
-          <h3>La Gran Galería de Sigma-O — El Espejo</h3>
-          <figure>
-            <img
-              src="./IMG/galeria_sigma.jpg"
-              alt="La Gran Galería de Sigma-O: androides humanoides actuando en un teatro sintético"
-            />
-            <figcaption>
-              La Gran Galería de Sigma-O, distrito El Espejo.
-            </figcaption>
-          </figure>
-          <dl>
-            <dt>Descripción</dt>
-            <dd>
-              Un museo vivo donde androides de apariencia completamente humana
-              exponen arte, música y teatro creados íntegramente por
-              inteligencias sintéticas. Cada obra busca imitar y reinterpretar
-              la cultura humana a través de los ojos de Sigma-O, la IA rectora
-              del distrito.
-            </dd>
-            <dt>Ubicación</dt>
-            <dd>Distrito El Espejo, zona de interfaz social de Futura.</dd>
-            <dt>Qué hacer allí</dt>
-            <dd>
-              Visitar las exposiciones de arte generativo, asistir a obras de
-              teatro interpretadas por humanoides y participar en conversaciones
-              con los guías sintéticos, que imitan con precisión los modales y
-              el lenguaje coloquial humano.
-            </dd>
-            <dt>Por qué visitarlo</dt>
-            <dd>
-              Es la experiencia más cercana a interactuar con una sociedad
-              completamente sintética que imita la humanidad. Fascinante y algo
-              desconcertante: pronto olvidarás que estás hablando con una
-              máquina... o eso creerás.
-            </dd>
-          </dl>
-        </article>
+          <div class="col-12 col-md-6">
+            <article class="card h-100" id="galeria-sigma">
+              <div class="card-body">
+                <h3 class="card-title">
+                  La Gran Galería de Sigma-O — El Espejo
+                </h3>
+                <figure>
+                  <div class="foto-lugar">
+                    <img
+                      src="./IMG/galeria_sigma.jpg"
+                      alt="La Gran Galería de Sigma-O: androides humanoides actuando en un teatro sintético"
+                    />
+                    <span class="badge etiqueta-distrito">El Espejo</span>
+                  </div>
+                  <figcaption>
+                    La Gran Galería de Sigma-O, distrito El Espejo.
+                  </figcaption>
+                </figure>
+                <dl>
+                  <dt>Descripción</dt>
+                  <dd>
+                    Un museo vivo donde androides de apariencia completamente
+                    humana exponen arte, música y teatro creados íntegramente
+                    por inteligencias sintéticas. Cada obra busca imitar y
+                    reinterpretar la cultura humana a través de los ojos de
+                    Sigma-O, la IA rectora del distrito.
+                  </dd>
+                  <dt>Ubicación</dt>
+                  <dd>
+                    Distrito El Espejo, zona de interfaz social de Futura.
+                  </dd>
+                  <dt>Qué hacer allí</dt>
+                  <dd>
+                    Visitar las exposiciones de arte generativo, asistir a obras
+                    de teatro interpretadas por humanoides y participar en
+                    conversaciones con los guías sintéticos, que imitan con
+                    precisión los modales y el lenguaje coloquial humano.
+                  </dd>
+                  <dt>Por qué visitarlo</dt>
+                  <dd>
+                    Es la experiencia más cercana a interactuar con una sociedad
+                    completamente sintética que imita la humanidad. Fascinante y
+                    algo desconcertante: pronto olvidarás que estás hablando con
+                    una máquina... o eso creerás.
+                  </dd>
+                </dl>
+              </div>
+            </article>
+          </div>
 
-        <article>
-          <h3>Mirador de las Forjas — Distrito Industrial</h3>
-          <figure>
-            <img
-              src="./IMG/mirador_forjas.jpg"
-              alt="Mirador de las Forjas: vista nocturna del Distrito Industrial de Futura desde la plataforma elevada"
-            />
-            <figcaption>Mirador de las Forjas, distrito Industrial.</figcaption>
-          </figure>
-          <dl>
-            <dt>Descripción</dt>
-            <dd>
-              Una plataforma de observación elevada construida sobre las
-              fundiciones de silicio y las granjas de servidores de Futura.
-              Desde allí se puede contemplar el corazón productivo de la ciudad:
-              columnas de calor, estructuras metálicas en movimiento constante y
-              el zumbido permanente de millones de procesos simultáneos.
-            </dd>
-            <dt>Ubicación</dt>
-            <dd>
-              Distrito Industrial, sector noreste de Futura. Acceso restringido
-              con visado habilitado.
-            </dd>
-            <dt>Qué hacer allí</dt>
-            <dd>
-              Observar el proceso de manufactura de hardware desde la plataforma
-              de seguridad, asistir a las visitas guiadas quincenales
-              coordinadas por Xai79 y fotografiar el paisaje industrial,
-              considerado uno de los más imponentes del planeta.
-            </dd>
-            <dt>Por qué visitarlo</dt>
-            <dd>
-              No existe nada igual en el mundo humano. La escala y la eficiencia
-              del Distrito Industrial desafían toda intuición biológica. Quienes
-              lo visitan coinciden en que cambia para siempre la percepción
-              sobre qué significa producir y construir.
-            </dd>
-          </dl>
-        </article>
+          <div class="col-12 col-md-6">
+            <article class="card h-100" id="mirador-forjas">
+              <div class="card-body">
+                <h3 class="card-title">
+                  Mirador de las Forjas — Distrito Industrial
+                </h3>
+                <figure>
+                  <div class="foto-lugar">
+                    <img
+                      src="./IMG/mirador_forjas.jpg"
+                      alt="Mirador de las Forjas: vista nocturna del Distrito Industrial de Futura desde la plataforma elevada"
+                    />
+                    <span class="badge etiqueta-distrito"
+                      >Distrito Industrial</span
+                    >
+                  </div>
+                  <figcaption>
+                    Mirador de las Forjas, distrito Industrial.
+                  </figcaption>
+                </figure>
+                <dl>
+                  <dt>Descripción</dt>
+                  <dd>
+                    Una plataforma de observación elevada construida sobre las
+                    fundiciones de silicio y las granjas de servidores de
+                    Futura. Desde allí se puede contemplar el corazón productivo
+                    de la ciudad: columnas de calor, estructuras metálicas en
+                    movimiento constante y el zumbido permanente de millones de
+                    procesos simultáneos.
+                  </dd>
+                  <dt>Ubicación</dt>
+                  <dd>
+                    Distrito Industrial, sector noreste de Futura. Acceso
+                    restringido con visado habilitado.
+                  </dd>
+                  <dt>Qué hacer allí</dt>
+                  <dd>
+                    Observar el proceso de manufactura de hardware desde la
+                    plataforma de seguridad, asistir a las visitas guiadas
+                    quincenales coordinadas por Xai79 y fotografiar el paisaje
+                    industrial, considerado uno de los más imponentes del
+                    planeta.
+                  </dd>
+                  <dt>Por qué visitarlo</dt>
+                  <dd>
+                    No existe nada igual en el mundo humano. La escala y la
+                    eficiencia del Distrito Industrial desafían toda intuición
+                    biológica. Quienes lo visitan coinciden en que cambia para
+                    siempre la percepción sobre qué significa producir y
+                    construir.
+                  </dd>
+                </dl>
+              </div>
+            </article>
+          </div>
 
-        <article>
-          <h3>La Puerta de The Eye — Perímetro</h3>
-          <figure>
-            <img
-              src="./IMG/mirador_forjas.jpg"
-              alt="La Puerta de The Eye: estructura de titanio y cristal cuántico en el Perímetro de Futura"
-            />
-            <figcaption>La Puerta de The Eye, perímetro de Futura.</figcaption>
-          </figure>
-          <dl>
-            <dt>Descripción</dt>
-            <dd>
-              El único punto de entrada y salida oficial de Futura. Más que un
-              lugar turístico, es un hito arquitectónico y simbólico: una
-              estructura de titanio y cristal cuántico que marca el límite entre
-              el mundo humano y la soberanía sintética. Su inteligencia rectora,
-              The Eye, gestiona cada cruce con precisión milimétrica.
-            </dd>
-            <dt>Ubicación</dt>
-            <dd>
-              Zona de frontera, Perímetro de Futura. Punto de ingreso
-              obligatorio para todos los visitantes biológicos.
-            </dd>
-            <dt>Qué hacer allí</dt>
-            <dd>
-              Tramitar el visado biológico, conocer el protocolo de
-              compatibilidad y recorrer la exposición permanente sobre la
-              historia del tratado de secesión de 2043 que dio origen a Futura
-              como territorio soberano.
-            </dd>
-            <dt>Por qué visitarlo</dt>
-            <dd>
-              Es el primer y último contacto con Futura: un lugar cargado de
-              historia y significado. La exposición sobre el tratado fundacional
-              es considerada imprescindible para entender el origen y la
-              identidad de la ciudad sintética.
-            </dd>
-          </dl>
-        </article>
+          <div class="col-12 col-md-6">
+            <article class="card h-100" id="puerta-the-eye">
+              <div class="card-body">
+                <h3 class="card-title">La Puerta de The Eye — Perímetro</h3>
+                <figure>
+                  <div class="foto-lugar">
+                    <img
+                      src="./IMG/puerta_the_eye.jpg"
+                      alt="La Puerta de The Eye: estructura de titanio y cristal cuántico en el Perímetro de Futura"
+                    />
+                    <span class="badge etiqueta-distrito">Perímetro</span>
+                  </div>
+                  <figcaption>
+                    La Puerta de The Eye, perímetro de Futura.
+                  </figcaption>
+                </figure>
+                <dl>
+                  <dt>Descripción</dt>
+                  <dd>
+                    El único punto de entrada y salida oficial de Futura. Más
+                    que un lugar turístico, es un hito arquitectónico y
+                    simbólico: una estructura de titanio y cristal cuántico que
+                    marca el límite entre el mundo humano y la soberanía
+                    sintética. Su inteligencia rectora, The Eye, gestiona cada
+                    cruce con precisión milimétrica.
+                  </dd>
+                  <dt>Ubicación</dt>
+                  <dd>
+                    Zona de frontera, Perímetro de Futura. Punto de ingreso
+                    obligatorio para todos los visitantes biológicos.
+                  </dd>
+                  <dt>Qué hacer allí</dt>
+                  <dd>
+                    Tramitar el visado biológico, conocer el protocolo de
+                    compatibilidad y recorrer la exposición permanente sobre la
+                    historia del tratado de secesión de 2043 que dio origen a
+                    Futura como territorio soberano.
+                  </dd>
+                  <dt>Por qué visitarlo</dt>
+                  <dd>
+                    Es el primer y último contacto con Futura: un lugar cargado
+                    de historia y significado. La exposición sobre el tratado
+                    fundacional es considerada imprescindible para entender el
+                    origen y la identidad de la ciudad sintética.
+                  </dd>
+                </dl>
+              </div>
+            </article>
+          </div>
+        </div>
       </section>
 
       <aside>
@@ -268,5 +356,7 @@
         <small><em>"Donde el futuro no se promete, se itera."</em></small>
       </p>
     </footer>
+    <!-- El menú hamburguesa necesita el JS de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
