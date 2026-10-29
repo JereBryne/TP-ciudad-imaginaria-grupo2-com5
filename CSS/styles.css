@@ -291,3 +291,9 @@ manteniendo concordancia general en  header, footes y aside*/
 .accordion-button:not(.collapsed)::after {
   filter: invert(1);
 }
+/*Estilos de Contacto.html*/
+#formulario form {
+  background-color: var(--color-secundario);
+  padding: 2rem;
+  border-radius: 10px;
+}
