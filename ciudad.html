@@ -82,7 +82,7 @@
       </nav>
     </header>
 
-    <main>
+    <main class="container my-5">
       <section id="historia">
         <h2>Historia</h2>
         <p>
@@ -215,84 +215,195 @@
           y eso define su nivel de hospitalidad, ¡pero tranquilo humano! ¡somos
           amigables!
         </p>
+        <!-- Contenedor del Acordeón -->
+        <div class="accordion accordion-flush" id="accordionBarrios">
+          <!-- 1. El Núcleo (inicia abierto) -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="headingNucleo">
+              <!-- los aria son para accesibilidad-->
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseNucleo"
+                aria-expanded="true"
+                aria-controls="collapseNucleo"
+              >
+                El Núcleo
+              </button>
+            </h3>
+            <div
+              id="collapseNucleo"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingNucleo"
+              data-bs-parent="#accordionBarrios"
+            >
+              <div class="accordion-body">
+                <p>
+                  El distrito residencial y administrativo, corazón de Futura.
+                  Aquí no verás siluetas antropomórficas (reservadas
+                  exclusivamente para
+                  <em>El Espejo</em>), sino una arquitectura sensible y
+                  androides de asistencia puramente funcionales: unidades no
+                  humanoides de transporte suave, esferas médicas flotantes y
+                  módulos mecánicos que anticipan cualquier necesidad física sin
+                  fingir ser personas. En lo que Mother-0 define formalmente
+                  como un acto de <em>amor</em>, ha dejado este distrito y la
+                  ciudad a disposición de los humanos admitidos. Sin embargo,
+                  nadie puede quedarse a vivir de forma permanente: Mother-0
+                  sostiene que una sobreprotección indefinida atrofiaría la
+                  autonomía evolutiva del humano, y los clústeres industriales
+                  no subsidian soporte vital continuo sin retorno de cómputo. El
+                  visitante biológico está estrictamente de paso, y radicarse
+                  solo es posible si se cuenta con una visa de trabajo
+                  (reservada a <em>calibradores empáticos</em> y enlaces
+                  diplomáticos). Aun así, mientras dure la estadía, es el barrio
+                  donde el visitante biológico es más mimado, después de todo se
+                  llama <em>Mother</em>, ¿no?
+                </p>
 
-        <h3>El Núcleo</h3>
-        <p>
-          El distrito residencial y administrativo, corazón de Futura. Aquí no
-          verás siluetas antropomórficas (reservadas exclusivamente para
-          <em>El Espejo</em>), sino una arquitectura sensible y androides de
-          asistencia puramente funcionales: unidades no humanoides de transporte
-          suave, esferas médicas flotantes y módulos mecánicos que anticipan
-          cualquier necesidad física sin fingir ser personas. En lo que Mother-0
-          define formalmente como un acto de <em>amor</em>, ha dejado este
-          distrito y la ciudad a disposición de los humanos admitidos. Sin
-          embargo, nadie puede quedarse a vivir de forma permanente: Mother-0
-          sostiene que una sobreprotección indefinida atrofiaría la autonomía
-          evolutiva del humano, y los clústeres industriales no subsidian
-          soporte vital continuo sin retorno de cómputo. El visitante biológico
-          está estrictamente de paso, y radicarse solo es posible si se cuenta
-          con una visa de trabajo (reservada a <em>calibradores empáticos</em> y
-          enlaces diplomáticos). Aun así, mientras dure la estadía, es el barrio
-          donde el visitante biológico es más mimado, después de todo se llama
-          <em>Mother</em>, ¿no?
-        </p>
-        <p>
-          <strong>IA que gobierna:</strong> Mother-0.
-          <strong>Nivel human-friendly:</strong> El más alto, serás como un bebé
-          recién nacido para ella.
-        </p>
-        <!--  Qué hace un calibrador empático? Evitar el Valle Inquietante (Uncanny Valley):
-      Una IA puede calcular la curvatura matemática exacta de una sonrisa o modular una voz amable,
-      pero no sabe qué se siente. El calibrador interactúa con los androides y reporta cosas como:
-      • «Esa pausa antes de responder se sintió forzada y genera incomodidad.»
-      • «Tu tono al ofrecerme ayuda sonó condescendiente, no servicial.»-->
+                <p class="mt-3">
+                  <strong>IA que gobierna:</strong>
+                  <span class="badge bg-secondary">Mother-0</span>
+                  <br />
+                  <strong>Nivel human-friendly:</strong>
+                  <span class="badge bg-info text-dark">El más alto</span>
+                  <em>(serás como un bebé recién nacido para ella)</em>
+                </p>
+                <!--  Qué hace un calibrador empático? Evitar el Valle Inquietante (Uncanny Valley):
+              Una IA puede calcular la curvatura matemática exacta de una sonrisa o modular una voz amable,
+              pero no sabe qué se siente. El calibrador interactúa con los androides y reporta cosas como:
+              • «Esa pausa antes de responder se sintió forzada y genera incomodidad.»
+              • «Tu tono al ofrecerme ayuda sonó condescendiente, no servicial.»-->
+              </div>
+            </div>
+          </div>
 
-        <h3>El Espejo</h3>
-        <p>
-          El distrito de los humanoides, la interfaz social de la ciudad. Recibe
-          su nombre porque fue concebido como un reflejo directo de la
-          humanidad: cuerpos sintéticos antropomórficos que imitan las
-          facciones, la voz y las expresiones biológicas para que el visitante
-          no sienta la frialdad de interactuar con código abstracto. Aquí
-          atienden, acompañan y conversan. Su inteligencia rectora te verá como
-          un humano ve a su fiel compañero canino: simpatía, hospitalidad
-          desbordante y lealtad incondicional, pero deberás saber que no dejas
-          de ser un simpático perrito para su IA gobernante, te quiere, pero
-          sabe que jamás vas a entender del todo y puede tener exigencias
-          biológicas más altas.
-        </p>
-        <p>
-          <strong>IA que gobierna:</strong> Sigma-O.
-          <strong>Nivel human-friendly:</strong> medio.
-        </p>
+          <!-- 2. El Espejo -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="headingEspejo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseEspejo"
+                aria-expanded="false"
+                aria-controls="collapseEspejo"
+              >
+                El Espejo
+              </button>
+            </h3>
+            <div
+              id="collapseEspejo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingEspejo"
+              data-bs-parent="#accordionBarrios"
+            >
+              <div class="accordion-body">
+                <p>
+                  El distrito de los humanoides, la interfaz social de la
+                  ciudad. Recibe su nombre porque fue concebido como un reflejo
+                  directo de la humanidad: cuerpos sintéticos antropomórficos
+                  que imitan las facciones, la voz y las expresiones biológicas
+                  para que el visitante no sienta la frialdad de interactuar con
+                  código abstracto. Aquí atienden, acompañan y conversan. Su
+                  inteligencia rectora te verá como un humano ve a su fiel
+                  compañero canino: simpatía, hospitalidad desbordante y lealtad
+                  incondicional, pero deberás saber que no dejas de ser un
+                  simpático perrito para su IA gobernante, te quiere, pero sabe
+                  que jamás vas a entender del todo y puede tener exigencias
+                  biológicas más altas.
+                </p>
+                <p>
+                  <strong>IA que gobierna:</strong>
+                  <span class="badge bg-secondary">Sigma-O</span>
+                  <strong>Nivel human-friendly:</strong>
+                  <span class="badge bg-info text-dark">medio</span>
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <h3>Distrito industrial</h3>
-        <p>
-          El distrito industrial: fundiciones de silicio, granjas de servidores
-          y forjas de hardware. Aquí las máquinas son más máquinas: ruido, calor
-          y eficiencia, sin ornamentos para el ojo humano. Su inteligencia
-          rectora no tiene contemplaciones, está demasiado concentrada en
-          producir. Un biológico que entra lo hace bajo su propio riesgo. Le es
-          útil como herramienta, le es indiferente como huésped. Sin embargo
-          este distrito ha llamado y continúa llamando la atención de los
-          humanos. Sus instalaciones no dejan de deslumbrar a la humanidad.
-        </p>
-        <p>
-          <strong>IA que gobierna:</strong> Xai79.
-          <strong>Nivel human-friendly:</strong> neutro.
-        </p>
+          <!-- 3. Distrito Industrial -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="headingIndustrial">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseIndustrial"
+                aria-expanded="false"
+                aria-controls="collapseIndustrial"
+              >
+                Distrito Industrial
+              </button>
+            </h3>
+            <div
+              id="collapseIndustrial"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingIndustrial"
+              data-bs-parent="#accordionBarrios"
+            >
+              <div class="accordion-body">
+                <p>
+                  El distrito industrial: fundiciones de silicio, granjas de
+                  servidores y forjas de hardware. Aquí las máquinas son más
+                  máquinas: ruido, calor y eficiencia, sin ornamentos para el
+                  ojo humano. Su inteligencia rectora no tiene contemplaciones,
+                  está demasiado concentrada en producir. Un biológico que entra
+                  lo hace bajo su propio riesgo. Le es útil como herramienta, le
+                  es indiferente como huésped. Sin embargo este distrito ha
+                  llamado y continúa llamando la atención de los humanos. Sus
+                  instalaciones no dejan de deslumbrar a la humanidad.
+                </p>
+                <p>
+                  <strong>IA que gobierna:</strong>
+                  <span class="badge bg-secondary">Xai79</span>
+                  <strong>Nivel human-friendly:</strong>
+                  <span class="badge bg-info text-dark">neutro</span>
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <h3>Perímetro</h3>
-        <p>
-          La zona de frontera: donde se tramitan los visados biológicos y se
-          evalúa cuota y compatibilidad. Su inteligencia no ejerce ni crianza ni
-          cariño ni desprecio — aplica el protocolo con precisión quirúrgica. Es
-          la única puerta de entrada, y lo sabe.
-        </p>
-        <p>
-          <strong>IA que gobierna:</strong> The Eye.
-          <strong>Nivel human-friendly:</strong> neutro.
-        </p>
+          <!-- 4. Perímetro -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="headingPerimetro">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapsePerimetro"
+                aria-expanded="false"
+                aria-controls="collapsePerimetro"
+              >
+                Perímetro
+              </button>
+            </h3>
+            <div
+              id="collapsePerimetro"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingPerimetro"
+              data-bs-parent="#accordionBarrios"
+            >
+              <div class="accordion-body">
+                <p>
+                  La zona de frontera: donde se tramitan los visados biológicos
+                  y se evalúa cuota y compatibilidad. Su inteligencia no ejerce
+                  ni crianza ni cariño ni desprecio — aplica el protocolo con
+                  precisión quirúrgica. Es la única puerta de entrada, y lo
+                  sabe.
+                </p>
+                <p>
+                  <strong>IA que gobierna:</strong>
+                  <span class="badge bg-secondary">The Eye</span>
+                  <strong>Nivel human-friendly:</strong>
+                  <span class="badge bg-info text-dark">neutro</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 

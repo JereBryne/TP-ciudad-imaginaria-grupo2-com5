@@ -278,3 +278,16 @@ manteniendo concordancia general en  header, footes y aside*/
   border-color: var(--color-acento);
   color: var(--color-fuente-claro);
 }
+
+/* Personalización del Acordeón con la paleta de Futura */
+.accordion {
+  --bs-accordion-bg: transparent;
+  --bs-accordion-active-bg: var(--color-primario); /* Azul de Futura */
+  --bs-accordion-active-color: var(--color-fuente-claro); /* Letras blancas */
+  --bs-accordion-btn-focus-box-shadow: none;
+}
+
+/* Flechita blanca para contrastar */
+.accordion-button:not(.collapsed)::after {
+  filter: invert(1);
+}
