@@ -13,89 +13,133 @@
       href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Bootstrap antes del CSS propio para poder personalizarlo -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- [Bootstrap CSS CDN] -->
     <link rel="stylesheet" href="CSS/styles.css" />
     <title>Eventos | Futura</title>
   </head>
 
   <body>
     <header>
-      <h1>Futura</h1>
-      <h2>Donde el futuro no se promete, se itera.</h2>
-      <p>
-        Soberanía sintética reconocida desde 2052. Visados biológicos sujetos a
-        aprobación de cuota y compatibilidad.
-      </p>
-      <nav
-        class="navbar navbar-expand-lg navbar-dark"
-        aria-label="Navegación principal"
-      >
-        <div class="container-fluid px-0">
-          <a class="navbar-brand" href="index.html">Futura</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#menuPrincipal"
-            aria-controls="menuPrincipal"
-            aria-expanded="false"
-            aria-label="Abrir o cerrar el menú"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="menuPrincipal">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ciudad.html">La Ciudad</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="lugares.html">Lugares de Interés</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  href="eventos.html"
-                  aria-current="page"
-                  >Eventos de la ciudad</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
-              </li>
-            </ul>
+      <div class="container px-0">
+        <!-- [Bootstrap container + px-0] -->
+        <h1>Futura</h1>
+        <h2>Donde el futuro no se promete, se itera.</h2>
+        <p>
+          Soberanía sintética reconocida desde 2052. Visados biológicos sujetos
+          a aprobación de cuota y compatibilidad.
+        </p>
+        <nav
+          class="navbar navbar-expand-lg navbar-dark px-0"
+          aria-label="Navegación principal"
+        >
+          <!-- [Bootstrap navbar responsiva] -->
+          <div class="container-fluid px-0">
+            <!-- [Bootstrap container-fluid] -->
+            <a class="navbar-brand d-none" href="index.html">Futura</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#menuPrincipal"
+              aria-controls="menuPrincipal"
+              aria-expanded="false"
+              aria-label="Abrir o cerrar el menú"
+            >
+              <!-- [Bootstrap navbar-toggler / menú hamburguesa] -->
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+              <!-- [Bootstrap collapse para ocultar/mostrar menú] -->
+              <ul class="navbar-nav ms-auto">
+                <!-- [Bootstrap navbar-nav + ms-auto] -->
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ciudad.html">La Ciudad</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="lugares.html">Lugares de Interés</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    href="eventos.html"
+                    aria-current="page"
+                    >Eventos de la ciudad</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <nav aria-label="Navegación eventos y turismo">
-        <ul>
-          <li><a href="#El-Núcleo">El Núcleo</a></li>
-          <li><a href="#El-Espejo">El Espejo</a></li>
-          <li><a href="#Distrito-industrial">Distrito Industrial</a></li>
-          <li><a href="#Perímetro">Perímetro</a></li>
+    <main class="container my-4">
+      <!-- [Bootstrap container + espaciado vertical my-4] -->
+      <!-- Navegación interna mejorada con clases pill de Bootstrap -->
+      <nav aria-label="Navegación eventos y turismo" class="mb-5 text-center">
+        <ul class="nav nav-pills justify-content-center gap-2">
+          <!-- [Bootstrap nav-pills + centrado y separación] -->
+          <li class="nav-item">
+            <a class="nav-link active bg-primary" href="#El-Núcleo"
+              >El Núcleo</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark bg-secondary bg-opacity-25"
+              href="#El-Espejo"
+              >El Espejo</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark bg-secondary bg-opacity-25"
+              href="#Distrito-industrial"
+              >Distrito Industrial</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark bg-secondary bg-opacity-25"
+              href="#Perímetro"
+              >Perímetro</a
+            >
+          </li>
         </ul>
       </nav>
-      <section id="El-Núcleo">
+
+      <section
+        id="El-Núcleo"
+        class="p-4 mb-4 bg-white border rounded shadow-sm"
+      >
+        <!-- [Bootstrap padding, margen, fondo, bordes y sombra] -->
         <h2>Conoce los mejores eventos de nuestra ciudad Futura</h2>
         <p>
           Puntos de interés y eventos destacados de la ciudad de Futura.
           Descubre la historia, cultura y actividades que hacen de Futura un
           lugar único para visitar.
         </p>
-        <a href="ciudad.html">
-          <button type="button">Conocer mas</button>
+        <a href="ciudad.html" class="text-decoration-none">
+          <button type="button" class="btn btn-primary">Conocer mas</button>
+          <!-- [Bootstrap botón primario] -->
         </a>
       </section>
-      <section id="El-Espejo">
+
+      <section
+        id="El-Espejo"
+        class="p-4 mb-4 bg-white border rounded shadow-sm"
+      >
+        <!-- [Bootstrap utilidades de diseño] -->
         <h2>Lugares Destacados</h2>
         <p>
           Explora los lugares más emblemáticos de Futura, desde parques y museos
@@ -103,7 +147,12 @@
           para los visitantes.
         </p>
       </section>
-      <section id="Distrito-industrial">
+
+      <section
+        id="Distrito-industrial"
+        class="p-4 mb-4 bg-white border rounded shadow-sm"
+      >
+        <!-- [Bootstrap utilidades de diseño] -->
         <h2>Eventos y Actividades</h2>
         <p>
           Participa en los eventos y actividades que se llevan a cabo en Futura.
@@ -111,7 +160,12 @@
           para todos los gustos.
         </p>
       </section>
-      <section id="Perímetro">
+
+      <section
+        id="Perímetro"
+        class="p-4 mb-4 bg-white border rounded shadow-sm"
+      >
+        <!-- [Bootstrap utilidades de diseño] -->
         <h2>Eventos Especiales</h2>
         <p>
           Descubre los eventos especiales que se celebran en Futura. Desde
@@ -119,9 +173,11 @@
           actividades para disfrutar.
         </p>
       </section>
-      <aside>
+
+      <aside class="p-4 mb-5 bg-light border rounded">
+        <!-- [Bootstrap padding, margen y fondo claro] -->
         <h2>
-          ¿Planeas visitarnos? aca esta el resumen ed nuestros lugares
+          ¿Planeas visitarnos? aca esta el resumen de nuestros lugares
           emblematicos
         </h2>
         <p>
@@ -129,8 +185,9 @@
           hospitalidad y mucho más. Ciudad Futura ofrece una experiencia
           extraordinaria para cada visitante, no te lo pierdas.
         </p>
-        <a href="contacto.html">
-          <button type="button">Contactanos</button>
+        <a href="contacto.html" class="text-decoration-none">
+          <button type="button" class="btn btn-secondary">Contactanos</button>
+          <!-- [Bootstrap botón secundario] -->
         </a>
       </aside>
     </main>
@@ -163,7 +220,7 @@
         <small><em>"Donde el futuro no se promete, se itera."</em></small>
       </p>
     </footer>
-    <!-- El menú hamburguesa necesita el JS de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- [Bootstrap JS Bundle CDN] -->
   </body>
 </html>
