@@ -88,91 +88,163 @@
         </p>
         <a href="ciudad.html" class="btn btn-primary">Conocer más</a>
       </section>
+      
       <section id="resumen_lugares" class="section">
         <h2>Lugares Destacados</h2>
-        <div class="grilla-tarjeta">
-          <article class="tarjeta d-flex flex-column">
-            <figure class="foto-lugar">
-              <img
-                src="IMG/jardin_latencias.jpg"
-                alt="Senderos iluminados del Jardín de Latencias"
-              />
-              <span class="badge etiqueta-distrito">El Núcleo</span>
-            </figure>
-            <h3>Jardín de Latencias</h3>
-            <p>
-              Senderos adaptativos y esferas médicas flotantes en el corazón de
-              Futura. Un espacio de bienvenida donde Mother-0 cuida a cada
-              visitante biológico.
-            </p>
-            <a
-              href="lugares.html#jardin-latencias"
-              class="btn btn-primary mt-auto align-self-center"
-              >Conocer el jardín</a
-            >
-          </article>
-          <article class="tarjeta d-flex flex-column">
-            <figure class="foto-lugar">
-              <img
-                src="IMG/galeria_sigma.jpg"
-                alt="Teatro sintético de la Gran Galería de Sigma-O"
-              />
-              <span class="badge etiqueta-distrito">El Espejo</span>
-            </figure>
-            <h3>La Gran Galería de Sigma-O</h3>
-            <p>
-              Arte, música y teatro creados por inteligencias sintéticas.
-              Descubrí cómo los androides de El Espejo reinterpretan la cultura
-              humana.
-            </p>
-            <a
-              href="lugares.html#galeria-sigma"
-              class="btn btn-primary mt-auto align-self-center"
-              >Conocer la galería</a
-            >
-          </article>
-          <article class="tarjeta d-flex flex-column">
-            <figure class="foto-lugar">
-              <img
-                src="IMG/mirador_forjas.jpg"
-                alt="Vista nocturna de las forjas del Distrito Industrial"
-              />
-              <span class="badge etiqueta-distrito">Distrito Industrial</span>
-            </figure>
-            <h3>Mirador de las Forjas</h3>
-            <p>
-              Una plataforma elevada sobre las fundiciones de silicio y las
-              granjas de servidores. Contemplá el paisaje industrial y el
-              corazón productivo de Futura.
-            </p>
-            <a
-              href="lugares.html#mirador-forjas"
-              class="btn btn-primary mt-auto align-self-center"
-              >Conocer el mirador</a
-            >
-          </article>
-          <article class="tarjeta d-flex flex-column">
-            <figure class="foto-lugar">
-              <img
-                src="IMG/puerta_the_eye.jpg"
-                alt="La Puerta de The Eye en el Perímetro de Futura"
-              />
-              <span class="badge etiqueta-distrito">Perímetro</span>
-            </figure>
-            <h3>La Puerta de The Eye</h3>
-            <p>
-              La entrada oficial a la ciudad sintética: una estructura de
-              titanio y cristal cuántico donde se tramitan los visados y se
-              conoce la historia del tratado fundacional.
-            </p>
-            <a
-              href="lugares.html#puerta-the-eye"
-              class="btn btn-primary mt-auto align-self-center"
-              >Conocer la puerta</a
-            >
-          </article>
+
+        <div id="carruselLugares" class="carousel carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carruselLugares"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Lugar 1: Jardín de Latencias"
+            ></button>
+
+            <button
+              type="button"
+              data-bs-target="#carruselLugares"
+              data-bs-slide-to="1"
+              aria-label="Lugar 2: La Gran Galería de Sigma-O"
+            ></button>
+
+            <button
+              type="button"
+              data-bs-target="#carruselLugares"
+              data-bs-slide-to="2"
+              aria-label="Lugar 3: Mirador de las Forjas"
+            ></button>
+
+            <button
+              type="button"
+              data-bs-target="#carruselLugares"
+              data-bs-slide-to="3"
+              aria-label="Lugar 4: La Puerta de The Eye"
+            ></button>
+          </div>
+
+          <div class="carousel-inner pb-5">
+            
+            <div class="carousel-item active">
+              <article class="card tarjeta-carrusel mx-auto shadow-sm">
+                <figure class="foto-lugar mb-0">
+                  <img
+                    src="IMG/jardin_latencias.jpg"
+                    class="card-img-top"
+                    alt="Senderos iluminados del Jardín de Latencias"/>
+                  <span class="badge etiqueta-distrito">El Núcleo</span>
+                </figure>
+                <div class="card-body text-center">
+                  <h3 class="card-title">Jardín de Latencias</h3>
+                  <p class="card-text">
+                    Senderos adaptativos y esferas médicas flotantes en el
+                    corazón de Futura. Un espacio de bienvenida donde Mother-0
+                    cuida a cada visitante biológico.
+                  </p>
+                  <a href="lugares.html#jardin-latencias" class="btn btn-primary"
+                    >Conocer el jardín</a
+                  >
+                </div>
+              </article>
+            </div>
+
+            <div class="carousel-item">
+              <article class="card tarjeta-carrusel mx-auto shadow-sm">
+                <figure class="foto-lugar mb-0">
+                  <img
+                    src="IMG/galeria_sigma.jpg"
+                    class="card-img-top"
+                    alt="Teatro sintético de la Gran Galería de Sigma-O"
+                  />
+                  <span class="badge etiqueta-distrito">El Espejo</span>
+                </figure>
+                <div class="card-body text-center">
+                  <h3 class="card-title">La Gran Galería de Sigma-O</h3>
+                  <p class="card-text">
+                    Arte, música y teatro creados por inteligencias sintéticas.
+                    Descubrí cómo los androides de El Espejo reinterpretan la
+                    cultura humana.
+                  </p>
+                  <a href="lugares.html#galeria-sigma" class="btn btn-primary"
+                    >Conocer la galería</a
+                  >
+                </div>
+              </article>
+            </div>
+
+            <div class="carousel-item">
+              <article class="card tarjeta-carrusel mx-auto shadow-sm">
+                <figure class="foto-lugar mb-0">
+                  <img
+                    src="IMG/mirador_forjas.jpg"
+                    class="card-img-top"
+                    alt="Vista nocturna de las forjas del Distrito Industrial"
+                  />
+                  <span class="badge etiqueta-distrito">Distrito Industrial</span>
+                </figure>
+                <div class="card-body text-center">
+                  <h3 class="card-title">Mirador de las Forjas</h3>
+                  <p class="card-text">
+                    Una plataforma elevada sobre las fundiciones de silicio y
+                    las granjas de servidores. Contemplá el paisaje industrial y
+                    el corazón productivo de Futura.
+                  </p>
+                  <a href="lugares.html#mirador-forjas" class="btn btn-primary"
+                    >Conocer el mirador</a
+                  >
+                </div>
+              </article>
+            </div>
+
+            <div class="carousel-item">
+              <article class="card tarjeta-carrusel mx-auto shadow-sm">
+                <figure class="foto-lugar mb-0">
+                  <img
+                    src="IMG/puerta_the_eye.jpg"
+                    class="card-img-top"
+                    alt="La Puerta de The Eye en el Perímetro de Futura"
+                  />
+                  <span class="badge etiqueta-distrito">Perímetro</span>
+                </figure>
+                <div class="card-body text-center">
+                  <h3 class="card-title">La Puerta de The Eye</h3>
+                  <p class="card-text">
+                    La entrada oficial a la ciudad sintética: una estructura de
+                    titanio y cristal cuántico donde se tramitan los visados y
+                    se conoce la historia del tratado fundacional.
+                  </p>
+                  <a href="lugares.html#puerta-the-eye" class="btn btn-primary"
+                    >Conocer la puerta</a
+                  >
+                </div>
+              </article>
+            </div>
+
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carruselLugares"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carruselLugares"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
         </div>
       </section>
+
       <aside id="contactanos" class="banner-contacto">
         <h2>¿Planeas visitarnos?</h2>
         <p>
