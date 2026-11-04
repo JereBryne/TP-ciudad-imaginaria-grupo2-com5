@@ -84,94 +84,284 @@
     </header>
 
     <main class="container my-4">
-      <!-- [Bootstrap container + espaciado vertical my-4] -->
-      <!-- Navegación interna mejorada con clases pill de Bootstrap -->
-      <nav aria-label="Navegación eventos y turismo" class="mb-5 text-center">
-        <ul class="nav nav-pills justify-content-center gap-2">
-          <!-- [Bootstrap nav-pills + centrado y separación] -->
-          <li class="nav-item">
-            <a class="nav-link active bg-primary" href="#El-Núcleo"
-              >El Núcleo</a
+      <section>
+        <h2>Conoce los mejores eventos de nuestra ciudad Futura</h2>
+        <!-- [Bootstrap container + espaciado vertical my-4] -->
+        <!-- Navegación interna mejorada con clases pill de Bootstrap -->
+        <nav aria-label="Navegación eventos y turismo" class="mb-5 text-center">
+          <ul class="nav nav-pills justify-content-center gap-2">
+            <!-- [Bootstrap nav-pills + centrado y separación] -->
+            <li class="nav-item">
+              <a class="nav-link active bg-secondary" href="#El-Núcleo"
+                >El Núcleo</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active bg-secondary" href="#El-Espejo"
+                >El Espejo</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-dark bg-secondary bg-opacity-25"
+                href="#Distrito-industrial"
+                >Distrito Industrial</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-dark bg-secondary bg-opacity-25"
+                href="#Exclusivos"
+                >Eventos Exclusivos</a
+              >
+            </li>
+          </ul>
+          <p>
+            Estas a un paso de descubrir los mejores eventos de nuestra ciudad,
+            donde cada momento es especial. <br />
+            ¿estas listo para una experiencia inolvidable?
+          </p>
+          <figure class="my-4">
+            <div
+              class="ratio ratio-16x9 shadow-sm rounded overflow-hidden border"
             >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-dark bg-secondary bg-opacity-25"
-              href="#El-Espejo"
-              >El Espejo</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-dark bg-secondary bg-opacity-25"
-              href="#Distrito-industrial"
-              >Distrito Industrial</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-dark bg-secondary bg-opacity-25"
-              href="#Perímetro"
-              >Perímetro</a
-            >
-          </li>
-        </ul>
-      </nav>
+              <video
+                controls
+                preload="metadata"
+                aria-label="Presentación institucional de la ciudad de Futura"
+              >
+                <source src="VIDEO/Robot-Te.mp4" type="video/mp4" />
+                <p class="p-3 text-muted">
+                  Tu navegador no soporta la reproducción de videos. Podés
+                  <a href="VIDEO/Robot-Te.mp4" download
+                    >descargar el archivo MP4 aquí</a
+                  >.
+                </p>
+              </video>
+            </div>
+            <figcaption class="figure-caption text-center mt-2">
+              Recorrido visual por los distritos principales de Futura (Año
+              2056).*TENGO QUE PONER UN VIDEO SUPER EMOCIONANTE DE LA CUIDAD*
+            </figcaption>
+          </figure>
+        </nav>
+      </section>
 
       <section
         id="El-Núcleo"
         class="p-4 mb-4 bg-white border rounded shadow-sm"
       >
-        <!-- [Bootstrap padding, margen, fondo, bordes y sombra] -->
-        <h2>Conoce los mejores eventos de nuestra ciudad Futura</h2>
-        <p>
-          Puntos de interés y eventos destacados de la ciudad de Futura.
-          Descubre la historia, cultura y actividades que hacen de Futura un
-          lugar único para visitar.
+        <h2>Lugares Destacados de El Núcleo</h2>
+        <p class="mb-4">
+          Explora los lugares más emblemáticos de Futura, desde parques y museos
+          hasta distritos industriales. Cada lugar ofrece una experiencia única
+          para los visitantes.
         </p>
-        <a href="ciudad.html" class="text-decoration-none">
-          <button type="button" class="btn btn-primary">Conocer mas</button>
-          <!-- [Bootstrap botón primario] -->
-        </a>
+
+        <!-- Fila contenedora de las cartas -->
+        <div class="row g-4">
+          <!-- Carta 1 -->
+          <article class="col-12 col-md-6">
+            <div class="card h-100 border shadow-sm">
+              <img
+                src="img/evento-1.jpg"
+                class="card-img-top"
+                alt="Descripción del evento 1"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Concierto Sintético de Apertura</h3>
+                <p class="card-text">
+                  Disfruta de las mejores frecuencias armónicas en el corazón
+                  del Núcleo.
+                </p>
+                <a href="ciudad.html" class="btn btn-primary">Conocer mas</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carta 2 -->
+          <article class="col-12 col-md-6">
+            <div class="card h-100 border shadow-sm">
+              <img
+                src="img/evento-2.jpg"
+                class="card-img-top"
+                alt="Descripción del evento 2"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">
+                  Exhibición de Inteligencia Cuántica
+                </h3>
+                <p class="card-text">
+                  Innovación tecnológica y prototipos de IA interactivos para
+                  toda la ciudadanía.
+                </p>
+                <a href="ciudad.html" class="btn btn-primary">Conocer mas</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section
         id="El-Espejo"
         class="p-4 mb-4 bg-white border rounded shadow-sm"
       >
-        <!-- [Bootstrap utilidades de diseño] -->
-        <h2>Lugares Destacados</h2>
-        <p>
-          Explora los lugares más emblemáticos de Futura, desde parques y museos
-          hasta distritos industriales. Cada lugar ofrece una experiencia única
-          para los visitantes.
+        <h2>Lugares Destacados de El Espejo</h2>
+        <p class="mb-4">
+          Explora los lugares más emblemáticos de Futura, en el espejo
         </p>
+
+        <!-- Fila contenedora de las cartas -->
+        <div class="row g-4">
+          <!-- Carta 1 -->
+          <article class="col-12 col-md-6">
+            <div class="card h-100 border shadow-sm">
+              <img
+                src="img/evento-1.jpg"
+                class="card-img-top"
+                alt="Descripción del evento 1"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Concierto Sintético de Apertura</h3>
+                <p class="card-text">
+                  Disfruta de las mejores frecuencias armónicas en el corazón
+                  del Núcleo.
+                </p>
+                <a href="ciudad.html" class="btn btn-primary">Conocer mas</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carta 2 -->
+          <article class="col-12 col-md-6">
+            <div class="card h-100 border shadow-sm">
+              <img
+                src="img/evento-2.jpg"
+                class="card-img-top"
+                alt="Descripción del evento 2"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">
+                  Exhibición de Inteligencia Cuántica
+                </h3>
+                <p class="card-text">
+                  Innovación tecnológica y prototipos de IA interactivos para
+                  toda la ciudadanía.
+                </p>
+                <a href="ciudad.html" class="btn btn-primary">Conocer mas</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section
         id="Distrito-industrial"
         class="p-4 mb-4 bg-white border rounded shadow-sm"
       >
-        <!-- [Bootstrap utilidades de diseño] -->
-        <h2>Eventos y Actividades</h2>
-        <p>
-          Participa en los eventos y actividades que se llevan a cabo en Futura.
-          Desde festivales culturales hasta exposiciones tecnológicas, hay algo
-          para todos los gustos.
+        <h2>Lugares Destacados de Distrito Industrial</h2>
+        <p class="mb-4">
+          Explora los lugares más emblemáticos de Futura, en el
+          Distrito-industrial
         </p>
+
+        <!-- Fila contenedora de las cartas -->
+        <div class="row g-4">
+          <!-- Carta 1 -->
+          <article class="col-12 col-md-6">
+            <div class="card h-100 border shadow-sm">
+              <img
+                src="img/evento-1.jpg"
+                class="card-img-top"
+                alt="Descripción del evento 1"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Concierto Sintético de Apertura</h3>
+                <p class="card-text">
+                  Disfruta de las mejores frecuencias armónicas en el corazón
+                  del Núcleo.
+                </p>
+                <a href="ciudad.html" class="btn btn-primary">Conocer mas</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carta 2 -->
+          <article class="col-12 col-md-6">
+            <div class="card h-100 border shadow-sm">
+              <img
+                src="img/evento-2.jpg"
+                class="card-img-top"
+                alt="Descripción del evento 2"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">
+                  Exhibición de Inteligencia Cuántica
+                </h3>
+                <p class="card-text">
+                  Innovación tecnológica y prototipos de IA interactivos para
+                  toda la ciudadanía.
+                </p>
+                <a href="ciudad.html" class="btn btn-primary">Conocer mas</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section
-        id="Perímetro"
+        id="Exclusivos"
         class="p-4 mb-4 bg-white border rounded shadow-sm"
       >
-        <!-- [Bootstrap utilidades de diseño] -->
-        <h2>Eventos Especiales</h2>
-        <p>
-          Descubre los eventos especiales que se celebran en Futura. Desde
-          conciertos hasta exposiciones de arte, hay una gran variedad de
-          actividades para disfrutar.
+        <h2>Eventos Exclusivos de Futura</h2>
+        <p class="mb-4">
+          Explora los lugares más emblemáticos de Futura, desde parques y museos
+          hasta distritos industriales. Cada lugar ofrece una experiencia única
+          para los visitantes.
         </p>
+
+        <!-- Fila contenedora de las cartas -->
+        <div class="row g-4">
+          <!-- Carta 1 -->
+          <article class="col-12 col-md-6">
+            <div class="card h-100 border shadow-sm">
+              <img
+                src="img/evento-1.jpg"
+                class="card-img-top"
+                alt="Descripción del evento 1"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Concierto Sintético de Apertura</h3>
+                <p class="card-text">
+                  Disfruta de las mejores frecuencias armónicas en el corazón
+                  del Núcleo.
+                </p>
+                <a href="ciudad.html" class="btn btn-primary">Conocer mas</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carta 2 -->
+          <article class="col-12 col-md-6">
+            <div class="card h-100 border shadow-sm">
+              <img
+                src="img/evento-2.jpg"
+                class="card-img-top"
+                alt="Descripción del evento 2"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">
+                  Exhibición de Inteligencia Cuántica
+                </h3>
+                <p class="card-text">
+                  Innovación tecnológica y prototipos de IA interactivos para
+                  toda la ciudadanía.
+                </p>
+                <a href="ciudad.html" class="btn btn-primary">Conocer mas</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
 
       <aside class="p-4 mb-5 bg-light border rounded">
@@ -185,10 +375,7 @@
           hospitalidad y mucho más. Ciudad Futura ofrece una experiencia
           extraordinaria para cada visitante, no te lo pierdas.
         </p>
-        <a href="contacto.html" class="text-decoration-none">
-          <button type="button" class="btn btn-secondary">Contactanos</button>
-          <!-- [Bootstrap botón secundario] -->
-        </a>
+        <a href="ciudad.html" class="btn btn-primary">Conocer mas</a>
       </aside>
     </main>
 
