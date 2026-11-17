@@ -78,9 +78,24 @@
     <main class="container lugares-main">
       <section>
         <h2>Lugares Destacados de Futura</h2>
+        <div class="mb-4">
+          <label for="buscador-lugares" class="form-label">
+            Buscar lugar o distrito
+          </label>
 
+          <input
+            type="search"
+            id="buscador-lugares"
+            class="form-control"
+            placeholder="Por ejemplo: Mirador o Espejo"
+          />
+
+          <p id="cantidad-resultados" class="mt-2" aria-live="polite">
+            Mostrando 4 lugares
+          </p>
+        </div>
         <div class="row g-4">
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 lugar">
             <article class="card h-100" id="jardin-latencias">
               <div class="card-body">
                 <h3 class="card-title">Jardín de Latencias — El Núcleo</h3>
@@ -128,7 +143,7 @@
             </article>
           </div>
 
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 lugar">
             <article class="card h-100" id="galeria-sigma">
               <div class="card-body">
                 <h3 class="card-title">
@@ -178,7 +193,7 @@
             </article>
           </div>
 
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 lugar">
             <article class="card h-100" id="mirador-forjas">
               <div class="card-body">
                 <h3 class="card-title">
@@ -234,7 +249,7 @@
             </article>
           </div>
 
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 lugar">
             <article class="card h-100" id="puerta-the-eye">
               <div class="card-body">
                 <h3 class="card-title">La Puerta de The Eye — Perímetro</h3>
@@ -358,5 +373,6 @@
     </footer>
     <!-- El menú hamburguesa necesita el JS de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/main.js"></script>
   </body>
 </html>
