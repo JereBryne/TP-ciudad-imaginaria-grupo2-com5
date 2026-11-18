@@ -45,8 +45,8 @@ if (btnNewsletter) {
       mensajeNewsletter.textContent = "Te suscribiste al Newsletter exitosamente.";
       emailNewsletter.value = "";
     } else {
-      mensajeNewsletter.textContent = "Ingresa un correo electronico valido."
+      mensajeNewsletter.textContent = "Ingresa un correo electronico valido.";
     }
-  })
+  });
 }
 
