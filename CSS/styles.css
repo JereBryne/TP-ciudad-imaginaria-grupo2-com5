@@ -161,6 +161,13 @@ header .navbar .nav-link.active {
   color: #ffffff;
 }
 
+/* Separación del menú desplegable en celulares */
+@media (max-width: 991.98px) {
+  header .navbar-collapse {
+    margin-top: 1rem;
+  }
+}
+
 /* Botones del selector de tema en el menú */
 header [data-tema] {
   color: var(--color-header-texto);
