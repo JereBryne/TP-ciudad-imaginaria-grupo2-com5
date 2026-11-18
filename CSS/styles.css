@@ -1,18 +1,73 @@
-/* ESTILOS GENERALES: COMPARTIDOS POR TODAS LAS PÁGINAS */
-:root {
-  /* Colores de texto */
-  --color-fuente-oscuro: #0f172a;
-  --color-fuente-claro: #ffffff;
-  /* Colores principales */
+/* Variables de color para modo claro y modo oscuro */
+
+/* Paleta en modo claro (original de Futura) */
+:root,
+[data-bs-theme="light"] {
+  --fuente: "Play", sans-serif;
+
+  /* Fondo general y texto */
+  --color-fondo: #c3c9d1;
+  --color-texto: #0f172a;
+  --color-texto-suave: #475569;
+
+  /* Header y footer */
+  --color-header-fondo: #0f172a;
+  --color-header-texto: #ffffff;
+  --color-nav-link: #dbe2ef;
+
+  /* Colores de la ciudad */
   --color-primario: #2563eb;
   --color-secundario: #dbe2ef;
   --color-acento: #0a07b5;
-  /* Fondos */
-  --color-fondo: #c3c9d1;
-  /* Tipografía */
-  --fuente: "Play", sans-serif;
+
+  /* Tarjetas */
+  --color-superficie: #ffffff;
+  --color-superficie-borde: #dbe2ef;
+
+  /* Banner y formulario */
+  --color-banner-fondo: #dbe2ef;
+  --color-banner-texto: #0f172a;
+
+  /* Botones del selector de tema */
+  --color-selector-borde: rgba(255, 255, 255, 0.4);
+  --color-selector-activo-bg: #ffffff;
+  --color-selector-activo-color: #0f172a;
 }
 
+/* Paleta en modo oscuro (fondo negro) */
+[data-bs-theme="dark"] {
+  --fuente: "Play", sans-serif;
+
+  /* Fondo general y texto */
+  --color-fondo: #000000;
+  --color-texto: #f8fafc;
+  --color-texto-suave: #94a3b8;
+
+  /* Header y footer */
+  --color-header-fondo: #000000;
+  --color-header-texto: #ffffff;
+  --color-nav-link: #cbd5e1;
+
+  /* Colores de la ciudad */
+  --color-primario: #3b82f6;
+  --color-secundario: #18181b;
+  --color-acento: #60a5fa;
+
+  /* Tarjetas */
+  --color-superficie: #0a0a0a;
+  --color-superficie-borde: #262626;
+
+  /* Banner y formulario */
+  --color-banner-fondo: #0f0f12;
+  --color-banner-texto: #f8fafc;
+
+  /* Botones del selector de tema */
+  --color-selector-borde: rgba(255, 255, 255, 0.4);
+  --color-selector-activo-bg: #ffffff;
+  --color-selector-activo-color: #000000;
+}
+
+/* Estilos generales */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,38 +75,38 @@
 }
 
 body {
-  color: var(--color-fuente-oscuro);
+  color: var(--color-texto);
   font-family: var(--fuente);
   font-size: 16px;
   background-color: var(--color-fondo);
-  max-width: 1200px; /* Evita que en monitores gigantes se estire al infinito */
-  margin: 0 auto; /* Centra todo el sitio en la pantalla */
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-/* TIPOGRAFÍA Y RITMO VERTICAL */
+/* Tipografía y ritmo vertical */
 h1,
 h2,
 h3 {
-  margin-bottom: 0.75rem; /* Empuja hacia abajo al párrafo o elemento siguiente */
+  margin-bottom: 0.75rem;
 }
 
 p {
-  margin-bottom: 1rem; /* Separa los párrafos entre sí */
-  line-height: 1.5; /* Le da aire entre renglón y renglón al texto largo */
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
-/* HEADER Y NAVEGACIÓN GENERAL */
+/* Header y barra de navegación */
 header {
-  background-color: var(--color-fuente-oscuro);
-  color: var(--color-fuente-claro);
+  background-color: var(--color-header-fondo);
+  color: var(--color-header-texto);
   padding: 1.5rem;
-  margin-bottom: 2.5rem; /* Despega el menú del inicio del contenido */
+  margin-bottom: 2.5rem;
   border-bottom: 4px solid var(--color-primario);
 }
 
 header h1 {
-  color: var(--color-fuente-claro);
+  color: var(--color-header-texto);
 }
 
 header nav {
@@ -71,74 +126,94 @@ header nav a {
   display: block;
   padding: 0.5rem 0.75rem;
   border-radius: 6px;
-  color: var(--color-secundario);
+  color: var(--color-nav-link);
 }
 
 header nav a:hover {
   text-decoration: underline;
-  color: var(--color-fuente-claro);
+  color: var(--color-header-texto);
   background-color: var(--color-primario);
 }
 
-/* Navbar Bootstrap: personalización del header */
+/* Navbar de Bootstrap */
 header .navbar .navbar-nav {
   gap: 0.5rem;
 }
 
 header .navbar .navbar-brand {
   padding: 0;
-  color: var(--color-fuente-claro);
+  color: var(--color-header-texto);
   font-weight: bold;
 }
 
 header .navbar .nav-link {
   padding: 0.5rem 0.75rem;
-  color: var(--color-secundario);
+  color: var(--color-nav-link);
 }
 
 header .navbar .nav-link:hover {
   background-color: var(--color-primario);
-  color: var(--color-fuente-claro);
+  color: var(--color-header-texto);
 }
 
 header .navbar .nav-link.active {
   background-color: var(--color-acento);
-  color: var(--color-fuente-claro);
+  color: #ffffff;
+}
+
+/* Separación del menú desplegable en celulares */
+@media (max-width: 991.98px) {
+  header .navbar-collapse {
+    margin-top: 1rem;
+  }
+}
+
+/* Botones del selector de tema en el menú */
+header [data-tema] {
+  color: var(--color-header-texto);
+  border-color: var(--color-selector-borde);
+}
+
+header [data-tema]:hover,
+header [data-tema].active {
+  background-color: var(--color-selector-activo-bg);
+  border-color: var(--color-selector-activo-bg);
+  color: var(--color-selector-activo-color);
 }
 
 section {
-  margin-bottom: 2.5rem; /* Separa cada sección temática de la siguiente */
+  margin-bottom: 2.5rem;
 }
 
-/* FOOTER GENERAL */
+/* Footer general */
 footer {
-  background-color: var(--color-fuente-oscuro);
-  color: var(--color-fuente-claro);
-  text-align: center; /* Alinea todo el texto y los enlaces dentro del footer al centro de la pantalla */
+  background-color: var(--color-header-fondo);
+  color: var(--color-header-texto);
+  text-align: center;
   padding: 1.5rem;
   border-top: 4px solid var(--color-primario);
 }
 
 footer a {
-  color: var(--color-secundario);
+  color: var(--color-nav-link);
   text-decoration: none;
 }
 
 footer a:hover {
-  color: var(--color-fuente-claro);
+  color: var(--color-header-texto);
   text-decoration: underline;
 }
 
 footer address {
-  font-style: normal; /* Le quita la cursiva/itálica por defecto que los navegadores le aplican a la etiqueta <address> */
-  margin-bottom: 1rem; /* Crea un espacio hacia abajo de 1rem para separar los contactos del siguiente párrafo */
+  font-style: normal;
+  margin-bottom: 1rem;
 }
 
 footer address a {
-  margin: 0 0.5rem; /* Agrega un espacio lateral de 0.5rem a la izquierda y derecha de cada enlace (separa "Escribinos", "Llamanos" y "Seguinos") */
+  margin: 0 0.5rem;
 }
 
-/* INICIO: TARJETAS CON FLEXBOX */
+/* Tarjetas del inicio */
 .grilla-tarjeta {
   display: flex;
   flex-wrap: wrap;
@@ -146,15 +221,56 @@ footer address a {
   justify-content: center;
 }
 
-.tarjeta {
+.tarjeta,
+.tarjeta-carrusel {
   border-radius: 10px;
   padding: 1.5rem;
-  border: 1px solid var(--color-secundario); /* Borde moderno y sutil */
-  background-color: #ffffff; /* Fondo blanco para que contraste con el fondo
-  general */
+  border: 1px solid var(--color-superficie-borde);
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
   text-align: center;
   flex: 1 1 380px;
   min-width: 0;
+}
+
+/* Barritas del carrusel de lugares */
+.carousel.carrusel-lugares .carousel-indicators button[data-bs-target] {
+  width: 34px;
+  height: 8px;
+  border-radius: 4px;
+  border: 0;
+  background-clip: border-box;
+  background-color: #64748b;
+  opacity: 1;
+  margin: 0 5px;
+  transition: all 0.2s ease;
+}
+
+.carousel.carrusel-lugares .carousel-indicators button[data-bs-target]:hover {
+  background-color: #94a3b8;
+}
+
+.carousel.carrusel-lugares .carousel-indicators button[data-bs-target].active {
+  background-color: var(--color-primario);
+  transform: scale(1.15);
+}
+
+/* Barritas del carrusel en modo oscuro */
+[data-bs-theme="dark"] .carousel.carrusel-lugares .carousel-indicators button[data-bs-target] {
+  background-color: #64748b;
+  border: 0;
+  background-clip: border-box;
+  opacity: 1;
+}
+
+[data-bs-theme="dark"] .carousel.carrusel-lugares .carousel-indicators button[data-bs-target]:hover {
+  background-color: #94a3b8;
+}
+
+[data-bs-theme="dark"] .carousel.carrusel-lugares .carousel-indicators button[data-bs-target].active {
+  background-color: var(--color-primario);
+  box-shadow: 0 0 10px var(--color-primario);
+  transform: scale(1.15);
 }
 
 .tarjeta h3 {
@@ -173,27 +289,27 @@ footer address a {
 }
 
 .banner-contacto {
-  background-color: var(--color-secundario);
-  color: var(--color-fuente-oscuro);
+  background-color: var(--color-banner-fondo);
+  color: var(--color-banner-texto);
   border-radius: 10px;
   border: 1px solid var(--color-primario);
-  padding: 1.5rem; /* Aire interno*/
-  margin: 2rem 0; /* 2rem arriba/abajo, 0 a los costados */
+  padding: 1.5rem;
+  margin: 2rem 0;
 }
 
 .lugares_index {
   border-radius: 5px;
   margin: 10px;
   padding: 10px;
-  border-style: groove;
+  border: 1px solid var(--color-superficie-borde);
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
   text-align: center;
   flex: 1;
   min-width: 300px;
 }
 
-/* Estilos de lugares.html. 
-Con .lugares-main se aplican estilos solamente a lugares.html 
-manteniendo concordancia general en  header, footes y aside*/
+/* Estilos de lugares.html */
 .lugares-main section {
   padding: 1rem 0;
 }
@@ -205,9 +321,10 @@ manteniendo concordancia general en  header, footes y aside*/
 
 .lugares-main article {
   margin-bottom: 0;
-  border: 1px solid var(--color-secundario);
+  border: 1px solid var(--color-superficie-borde);
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
 }
 
 .lugares-main h3 {
@@ -225,13 +342,13 @@ manteniendo concordancia general en  header, footes y aside*/
   width: 100%;
   max-width: 760px;
   height: auto;
-  border: 1px solid var(--color-secundario);
+  border: 1px solid var(--color-superficie-borde);
   border-radius: 8px;
 }
 
 .lugares-main figcaption {
   margin-top: 0.5rem;
-  color: var(--color-fuente-oscuro);
+  color: var(--color-texto-suave);
   font-size: 0.9rem;
   font-style: italic;
 }
@@ -247,9 +364,9 @@ manteniendo concordancia general en  header, footes y aside*/
   line-height: 1.5;
 }
 
-/* POSICIONAMIENTO: ETIQUETAS SOBRE LAS IMÁGENES */
+/* Etiquetas sobre las imágenes */
 .foto-lugar {
-  position: relative; /* Referencia para ubicar la etiqueta */
+  position: relative;
 }
 
 .etiqueta-distrito {
@@ -257,12 +374,12 @@ manteniendo concordancia general en  header, footes y aside*/
   top: 0.75rem;
   left: 0.75rem;
   background-color: var(--color-acento);
-  color: var(--color-fuente-claro);
+  color: #ffffff;
   white-space: normal;
   text-align: left;
 }
 
-/* BOOTSTRAP: PERSONALIZACIONES CON LA PALETA DEL SITIO */
+/* Botones principales de Bootstrap */
 .lugares-main .card-body {
   padding: 1.25rem;
 }
@@ -270,30 +387,85 @@ manteniendo concordancia general en  header, footes y aside*/
 .btn-primary {
   background-color: var(--color-primario);
   border-color: var(--color-primario);
-  color: var(--color-fuente-claro);
+  color: #ffffff;
 }
 
 .btn-primary:hover {
   background-color: var(--color-acento);
   border-color: var(--color-acento);
-  color: var(--color-fuente-claro);
+  color: #ffffff;
 }
 
-/* Personalización del Acordeón con la paleta de Futura */
+/* Acordeón de barrios en ciudad.html */
 .accordion {
   --bs-accordion-bg: transparent;
-  --bs-accordion-active-bg: var(--color-primario); /* Azul de Futura */
-  --bs-accordion-active-color: var(--color-fuente-claro); /* Letras blancas */
+  --bs-accordion-active-bg: var(--color-primario);
+  --bs-accordion-active-color: #ffffff;
+  --bs-accordion-btn-color: var(--color-texto);
+  --bs-accordion-color: var(--color-texto);
   --bs-accordion-btn-focus-box-shadow: none;
 }
 
-/* Flechita blanca para contrastar */
 .accordion-button:not(.collapsed)::after {
   filter: invert(1);
 }
-/*Estilos de Contacto.html*/
+
+/* Formulario de contacto.html */
 #formulario form {
-  background-color: var(--color-secundario);
+  background-color: var(--color-banner-fondo);
+  color: var(--color-banner-texto);
+  border: 1px solid var(--color-superficie-borde);
   padding: 2rem;
   border-radius: 10px;
+}
+
+/* Información útil en lugares.html */
+.lugares-main aside {
+  background-color: var(--color-banner-fondo);
+  border: 1px solid var(--color-superficie-borde);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Buscador de lugares en modo oscuro */
+[data-bs-theme="dark"] #buscador-lugares {
+  background-color: var(--color-superficie);
+  border-color: var(--color-superficie-borde);
+  color: var(--color-texto);
+}
+
+[data-bs-theme="dark"] #buscador-lugares::placeholder {
+  color: var(--color-texto-suave);
+}
+
+/* Cajas y pestañas de eventos.html */
+.evento-caja {
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  border: 1px solid var(--color-superficie-borde);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.evento-caja h2 {
+  color: var(--color-primario);
+}
+
+.nav-pills .nav-link {
+  color: var(--color-texto);
+  border: 1px solid var(--color-superficie-borde);
+  background-color: var(--color-superficie);
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+  color: #ffffff;
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+  background-color: var(--color-banner-fondo);
+  color: var(--color-texto);
 }
