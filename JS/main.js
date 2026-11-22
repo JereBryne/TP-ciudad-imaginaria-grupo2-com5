@@ -71,3 +71,25 @@ if (botonesTema.length > 0) {
     });
   });
 }
+/* Newsletter de index.html */
+const emailNewsletter = document.getElementById("email-newsletter");
+const btnNewsletter = document.getElementById("btn-newsletter");
+const mensajeNewsletter = document.getElementById("mensaje-newsletter");
+
+if (btnNewsletter) {
+  btnNewsletter.addEventListener("click", () => {
+    const email = emailNewsletter.value.trim();
+
+    if (email === "") {
+      mensajeNewsletter.textContent =
+        "Por favor ingresa un correo electronico.";
+    } else if (email.includes("@") && email.length > 3) {
+      mensajeNewsletter.textContent =
+        "Te suscribiste al Newsletter exitosamente.";
+      emailNewsletter.value = "";
+    } else {
+      mensajeNewsletter.textContent =
+        "Ingresa un correo electronico valido.";
+    }
+  });
+}
