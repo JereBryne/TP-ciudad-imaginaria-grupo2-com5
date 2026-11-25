@@ -94,6 +94,25 @@ if (btnNewsletter) {
   });
 }
 
+/*Funciones para contacto.html*/
+const formVisados = document.getElementById("formVisados");
+const mensajeForm = document.getElementById("mensaje-form");
+if (mensajeForm && formVisados){
+  formVisados.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (!formVisados.checkValidity()) {
+      formVisados.classList.add("was-validated");
+      mensajeForm.textContent = "Por favor completá todos los campos obligatorios.";
+      mensajeForm.className = "text-danger mt-2";
+      return;
+    }
+      mensajeForm.textContent = "¡Formulario enviado exitosamente!";
+      mensajeForm.className = "text-success mt-2";
+      formVisados.reset();
+  });
+}
+
 /* Extensión de texto "Ver más / Ver menos" en eventos.html */
 const enlacesVerMas = document.querySelectorAll(".btn-ver-mas-texto");
 
