@@ -327,13 +327,13 @@ footer address a {
   color: var(--color-texto);
 }
 
-.lugares-main h3{
+.lugares-main h3 {
   margin-bottom: 1rem;
   color: var(--color-primario);
   font-size: 1.4rem;
 }
 
-.lugares-main figure{
+.lugares-main figure {
   margin: 1rem 0;
   text-align: center;
 }
