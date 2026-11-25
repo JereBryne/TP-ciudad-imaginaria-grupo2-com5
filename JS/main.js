@@ -112,3 +112,42 @@ if (mensajeForm && formVisados){
       formVisados.reset();
   });
 }
+
+/* Extensión de texto "Ver más / Ver menos" en eventos.html */
+const enlacesVerMas = document.querySelectorAll(".btn-ver-mas-texto");
+
+if (enlacesVerMas.length > 0) {
+  enlacesVerMas.forEach((boton) => {
+    boton.addEventListener("click", () => {
+      const parrafo = boton.closest(".card-text");
+      const continuacion = parrafo ? parrafo.querySelector(".texto-extra") : null;
+
+      if (continuacion) {
+        const estaOculto = continuacion.classList.toggle("d-none");
+        boton.textContent = estaOculto ? "Ver más" : "Ver menos";
+        boton.setAttribute("aria-expanded", String(!estaOculto));
+      }
+    });
+  });
+}
+
+/* Carrusel automático de videos en el aside de eventos.html (cada 10 segundos) */
+const carruselVideosAside = document.querySelector(".carrusel-aside-videos");
+
+if (carruselVideosAside) {
+  const tarjetasVideo = carruselVideosAside.querySelectorAll(".tarjeta-video-aside");
+  let indiceActual = 0;
+
+  if (tarjetasVideo.length > 1) {
+    setInterval(() => {
+      // Avanza al siguiente video y vuelve a 0 al llegar al último
+      indiceActual = (indiceActual + 1) % tarjetasVideo.length;
+
+      // Desplaza horizontalmente hasta la tarjeta correspondiente
+      carruselVideosAside.scrollTo({
+        left: tarjetasVideo[indiceActual].offsetLeft - carruselVideosAside.offsetLeft,
+        behavior: "smooth",
+      });
+    }, 10000);
+  }
+}

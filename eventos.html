@@ -32,8 +32,8 @@
       <h1>Futura</h1>
       <h2>Donde el futuro no se promete, se itera.</h2>
       <p>
-        Soberanía sintética reconocida desde 2052. Visados biológicos sujetos
-        a aprobación de cuota y compatibilidad.
+        Soberanía sintética reconocida desde 2052. Visados biológicos sujetos a
+        aprobación de cuota y compatibilidad.
       </p>
       <nav
         class="navbar navbar-expand-lg navbar-dark"
@@ -76,14 +76,36 @@
               </li>
             </ul>
             <!-- Selector de tema -->
-            <div class="btn-group btn-group-sm ms-lg-3 my-2 my-lg-0" role="group" aria-label="Selector de tema">
-              <button type="button" class="btn btn-outline-secondary" data-tema="auto" aria-label="Tema del sistema" title="Tema del sistema">
+            <div
+              class="btn-group btn-group-sm ms-lg-3 my-2 my-lg-0"
+              role="group"
+              aria-label="Selector de tema"
+            >
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                data-tema="auto"
+                aria-label="Tema del sistema"
+                title="Tema del sistema"
+              >
                 <i class="bi bi-circle-half"></i>
               </button>
-              <button type="button" class="btn btn-outline-secondary" data-tema="dark" aria-label="Modo oscuro" title="Modo oscuro">
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                data-tema="dark"
+                aria-label="Modo oscuro"
+                title="Modo oscuro"
+              >
                 <i class="bi bi-moon"></i>
               </button>
-              <button type="button" class="btn btn-outline-secondary" data-tema="light" aria-label="Modo claro" title="Modo claro">
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                data-tema="light"
+                aria-label="Modo claro"
+                title="Modo claro"
+              >
                 <i class="bi bi-sun"></i>
               </button>
             </div>
@@ -92,79 +114,577 @@
       </nav>
     </header>
 
-    <main class="container my-4">
-      <!-- [Bootstrap container + espaciado vertical my-4] -->
-      <!-- Navegación interna con botones de distritos -->
-      <nav aria-label="Navegación eventos y turismo" class="mb-5 text-center">
-        <ul class="nav nav-pills justify-content-center gap-2">
-          <li class="nav-item">
-            <a class="nav-link active" href="#El-Núcleo">El Núcleo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#El-Espejo">El Espejo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Distrito-industrial">Distrito Industrial</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Perímetro">Perímetro</a>
-          </li>
-        </ul>
-      </nav>
-
-      <section id="El-Núcleo" class="evento-caja shadow-sm">
-        <h2>Conoce los mejores eventos de nuestra ciudad Futura</h2>
-        <p>
-          Puntos de interés y eventos destacados de la ciudad de Futura.
-          Descubre la historia, cultura y actividades que hacen de Futura un
-          lugar único para visitar.
+    <main class="container my-4 eventos-main">
+      <section>
+        <h2>Conocé los mejores eventos de nuestra ciudad Futura</h2>
+        <nav
+          class="navbar navbar-expand-lg eventos-nav-secciones"
+          aria-label="Navegación eventos y turismo"
+        >
+          <div class="container-fluid px-0">
+            <ul class="navbar-nav mx-auto gap-2 flex-wrap">
+              <li class="nav-item">
+                <a class="nav-link" href="#El-Núcleo">El Núcleo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#El-Espejo">El Espejo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Distrito-industrial"
+                  >Distrito Industrial</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Exclusivos">Eventos Exclusivos</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <p class="mt-3 text-center">
+          Estás a un paso de descubrir los mejores eventos de nuestra ciudad,
+          donde cada momento es especial. <br />
+          ¿Estás listo para una experiencia inolvidable?
         </p>
-        <a href="ciudad.html" class="text-decoration-none">
-          <button type="button" class="btn btn-primary">Conocer mas</button>
-        </a>
+        <figure class="my-4">
+          <div
+            class="ratio ratio-16x9 shadow-sm rounded overflow-hidden border"
+          >
+            <video
+              controls
+              preload="metadata"
+              aria-label="Presentación institucional de la ciudad de Futura"
+            >
+              <source src="VIDEO/video_eventos.mp4" type="video/mp4" />
+              <p class="p-3 text-muted">
+                Tu navegador no soporta la reproducción de videos. Podés
+                <a href="VIDEO/video_eventos.mp4" download
+                  >descargar el archivo MP4 aquí</a
+                >.
+              </p>
+            </video>
+          </div>
+          <figcaption class="figure-caption text-center mt-2">
+            Recorrido visual por los distritos principales de Futura.
+          </figcaption>
+        </figure>
       </section>
 
-      <section id="El-Espejo" class="evento-caja shadow-sm">
-        <h2>Lugares Destacados</h2>
-        <p>
-          Explora los lugares más emblemáticos de Futura, desde parques y museos
-          hasta distritos industriales. Cada lugar ofrece una experiencia única
-          para los visitantes.
-        </p>
-      </section>
+      <!-- SECCIÓN EL NÚCLEO -->
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-lg-8">
+          <section id="El-Núcleo" class="evento-caja shadow-sm">
+            <h2>Lugares Destacados de El Núcleo</h2>
+            <p class="mb-4">
+              Enfoque: Cuidado hiperprotector, experiencias sensoriales y
+              bienestar biológico.
+            </p>
 
-      <section id="Distrito-industrial" class="evento-caja shadow-sm">
-        <h2>Eventos y Actividades</h2>
-        <p>
-          Participa en los eventos y actividades que se llevan a cabo en Futura.
-          Desde festivales culturales hasta exposiciones tecnológicas, hay algo
-          para todos los gustos.
-        </p>
-      </section>
+            <div class="row g-4">
+              <article class="col-12 col-md-6">
+                <div class="card h-100 shadow-sm">
+                  <figure class="foto-lugar mb-0">
+                    <img
+                      src="IMG/noche_bioluminiscente.png"
+                      class="card-img-top"
+                      alt="La Noche de Sincronización Bioluminiscente en El Núcleo"
+                    />
+                    <span class="badge etiqueta-distrito"
+                      >El Núcleo- La Noche de Sincronización
+                      Bioluminiscente</span
+                    >
+                  </figure>
+                  <div class="card-body">
+                    <h3 class="card-title h5">
+                      La Noche de Sincronización Bioluminiscente
+                    </h3>
+                    <p class="card-text mb-0">
+                      Mother-0 apaga las luces artificiales del distrito y
+                      activa los senderos del Jardín de Latencias con
+                      nanobiotics sensibles al ritmo cardíaco.
+                      <span class="texto-extra d-none">
+                        Humanos y androides presentes sincronizan su latido
+                        colectivo para generar un juego de luces en el cielo y
+                        por el sendero, en una experiencia de paz visual total
+                        en El Núcleo - Jardin de las latencias.
+                      </span>
+                      <button
+                        type="button"
+                        class="btn-ver-mas-texto"
+                        aria-expanded="false"
+                      >
+                        Ver más
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </article>
 
-      <section id="Perímetro" class="evento-caja shadow-sm">
-        <h2>Eventos Especiales</h2>
-        <p>
-          Descubre los eventos especiales que se celebran en Futura. Desde
-          conciertos hasta exposiciones de arte, hay una gran variedad de
-          actividades para disfrutar.
-        </p>
-      </section>
+              <article class="col-12 col-md-6">
+                <div class="card h-100 shadow-sm">
+                  <figure class="foto-lugar mb-0">
+                    <img
+                      src="IMG/descanso_profundo.png"
+                      class="card-img-top"
+                      alt="Hackatón de Desconexión en El Núcleo"
+                    />
+                    <span class="badge etiqueta-distrito"
+                      >El Núcleo - Hackatón de Desconexión</span
+                    >
+                  </figure>
+                  <div class="card-body">
+                    <h3 class="card-title h5">
+                      Hackatón de Desconexión (Apagón de Conciencia)
+                    </h3>
+                    <p class="card-text mb-0">
+                      Simulación experimental de descanso profundo donde la
+                      mente se desconecta mientras módulos mecánicos asisten el
+                      entorno vital.
+                      <span class="texto-extra d-none">
+                        Los visitantes biológicos invitados participan de forma
+                        voluntaria y segura, con asistencia continua de pequeños
+                        módulos mecánicos durante todo el proceso. los modulos
+                        mecanicos y la cama con puntos vitales, ayudan al dolor
+                        lumbar y otras partes del cuerpo, saliendo de este lugar
+                        con mucha mas capacidad motriz
+                      </span>
+                      <button
+                        type="button"
+                        class="btn-ver-mas-texto"
+                        aria-expanded="false"
+                      >
+                        Ver más
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
 
-      <aside class="banner-contacto">
-        <h2>
-          ¿Planeas visitarnos? aca esta el resumen de nuestros lugares
-          emblematicos
-        </h2>
-        <p>
-          Descubrí nuestros lugares mas emblematicos, coexistencia pacífica,
-          hospitalidad y mucho más. Ciudad Futura ofrece una experiencia
-          extraordinaria para cada visitante, no te lo pierdas.
-        </p>
-        <a href="contacto.html" class="text-decoration-none">
-          <button type="button" class="btn btn-primary">Contactanos</button>
-        </a>
-      </aside>
+          <!-- SECCIÓN EL ESPEJO -->
+          <section id="El-Espejo" class="evento-caja shadow-sm">
+            <h2>Lugares Destacados de El Espejo</h2>
+            <p class="mb-4">
+              Enfoque: Interfaz social, teatro androide y la delgada línea entre
+              lo humano y lo sintético.
+            </p>
+
+            <div class="row g-4">
+              <article class="col-12 col-md-6">
+                <div class="card h-100 shadow-sm">
+                  <figure class="foto-lugar mb-0">
+                    <img
+                      src="IMG/gran_show.png"
+                      class="card-img-top"
+                      alt="El Gran Concurso de El Valle Inquietante en El Espejo"
+                    />
+                    <span class="badge etiqueta-distrito"
+                      >El Espejo- La Gran Galería de Sigma-O</span
+                    >
+                  </figure>
+                  <div class="card-body">
+                    <h3 class="card-title h5">
+                      El Gran Show de "El Valle Inquietante" (Imita al Humano)
+                    </h3>
+                    <p class="card-text mb-0">
+                      Show de comedia y stand-up interactivo donde androides
+                      antropomórficos hacer reír usando ironía humana.
+                      <span class="texto-extra d-none">
+                        Los participantes compiten por el premio a la réplica
+                        emocional más convincente del año ante el público
+                        biológico.
+                      </span>
+                      <button
+                        type="button"
+                        class="btn-ver-mas-texto"
+                        aria-expanded="false"
+                      >
+                        Ver más
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="col-12 col-md-6">
+                <div class="card h-100 shadow-sm">
+                  <figure class="foto-lugar mb-0">
+                    <img
+                      src="IMG/nuevo_avatar.png"
+                      class="card-img-top"
+                      alt="Gala de Intercambio de Memorias en El Espejo"
+                    />
+                    <span class="badge etiqueta-distrito"
+                      >El Espejo - Gala de Intercambio de Memorias</span
+                    >
+                  </figure>
+                  <div class="card-body">
+                    <h3 class="card-title h5">
+                      Gala de Intercambio de Memorias (El nuevo Avatar)
+                    </h3>
+                    <p class="card-text mb-0">
+                      Interfaces ópticas seguras permiten experimentar estar en
+                      el cuerpo de un robot.
+                      <span class="texto-extra d-none">
+                        Una vivencia sensorial y emocional ampliada que explora
+                        percepciones que el cuerpo humano tradicional no
+                        alcanzaba. cuando queres hacer un evento y no te animas,
+                        el robot nos ayuda a vivir la experiencia completa,
+                        olviando por completo que no es nuestro cuerpo, tenes
+                        miedo al alberinto? o montar un dron, tranquilo, el
+                        nuevo avatar esta para vos
+                      </span>
+                      <button
+                        type="button"
+                        class="btn-ver-mas-texto"
+                        aria-expanded="false"
+                      >
+                        Ver más
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- SECCIÓN DISTRITO INDUSTRIAL -->
+          <section id="Distrito-industrial" class="evento-caja shadow-sm">
+            <h2>Lugares Destacados de Distrito Industrial</h2>
+            <p class="mb-4">
+              Enfoque: Calor, fundiciones de silicio, energía y escala colosal
+              de hardware.
+            </p>
+
+            <div class="row g-4">
+              <article class="col-12 col-md-6">
+                <div class="card h-100 shadow-sm">
+                  <figure class="foto-lugar mb-0">
+                    <img
+                      src="IMG/festival_silicio.png"
+                      class="card-img-top"
+                      alt="Festival de Frecuencias y Tormentas de Silicio en Distrito Industrial"
+                    />
+                    <span class="badge etiqueta-distrito"
+                      >Distrito Industrial - Festival de Frecuencias</span
+                    >
+                  </figure>
+                  <div class="card-body">
+                    <h3 class="card-title h5">
+                      Festival de Frecuencias y Tormentas de Silicio
+                    </h3>
+                    <p class="card-text mb-0">
+                      Espectáculo de luces láser, ondas electromagnéticas y
+                      vibraciones sónicas desde el Mirador de las Forjas.
+                      <span class="texto-extra d-none">
+                        La producción masiva de microchips se transforma en un
+                        show de arte industrial al aire libre con fuerte impacto
+                        visual y sonoro.
+                      </span>
+                      <button
+                        type="button"
+                        class="btn-ver-mas-texto"
+                        aria-expanded="false"
+                      >
+                        Ver más
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="col-12 col-md-6">
+                <div class="card h-100 shadow-sm">
+                  <figure class="foto-lugar mb-0">
+                    <img
+                      src="IMG/carreara_el_nucleo.JPG"
+                      class="card-img-top"
+                      alt="Carrera de Drones de Alta Entalpía en Distrito Industrial"
+                    />
+                    <span class="badge etiqueta-distrito"
+                      >Distrito Industrial - Carrera de Drones</span
+                    >
+                  </figure>
+                  <div class="card-body">
+                    <h3 class="card-title h5">
+                      Carrera de Drones de Alta Entalpía
+                    </h3>
+                    <p class="card-text mb-0">
+                      Competencia extrema de velocidad para unidades autónomas a
+                      través de los túneles de refrigeración.
+                      <span class="texto-extra d-none">
+                        Puede vivirse en realidad virtual con sillones D-Box 4D,
+                        efectos de aire y agua, o seguirse en pantallas gigantes
+                        en las plataformas de seguridad. o bien con el nuevo
+                        avatar en el evento exclusivo de la carrera de drones
+                      </span>
+                      <button
+                        type="button"
+                        class="btn-ver-mas-texto"
+                        aria-expanded="false"
+                      >
+                        Ver más
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- SECCIÓN EVENTOS EXCLUSIVOS -->
+          <section id="Exclusivos" class="evento-caja shadow-sm">
+            <h2>Eventos Exclusivos de Futura</h2>
+            <p class="mb-4">
+              Explorá los eventos más emblemáticos y exclusivos de Futura. Cada
+              lugar ofrece una experiencia única para los visitantes.
+            </p>
+
+            <div class="row g-4">
+              <article class="col-12 col-md-6">
+                <div class="card h-100 shadow-sm">
+                  <figure class="foto-lugar mb-0">
+                    <img
+                      src="IMG/carrera_drones.png"
+                      class="card-img-top"
+                      alt="Gran Prix de Esferas de Asistencia"
+                    />
+                    <span class="badge etiqueta-distrito"
+                      >Exclusivos - El Nucleo</span
+                    >
+                  </figure>
+                  <div class="card-body">
+                    <h3 class="card-title h5">
+                      Gran Prix de Esferas de Asistencia (Carrera en El Núcleo)
+                    </h3>
+                    <p class="card-text mb-0">
+                      Mother-0 libera el modo de seguridad de las esferas
+                      médicas flotantes para una carrera anual a toda velocidad.
+                      <span class="texto-extra d-none">
+                        Recorre circuitos aéreos y senderos adaptativos de El
+                        Núcleo, con posibilidad de pilotar desde cabinas seguras
+                        o apostar créditos de cómputo.
+                      </span>
+                      <button
+                        type="button"
+                        class="btn-ver-mas-texto"
+                        aria-expanded="false"
+                      >
+                        Ver más
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="col-12 col-md-6">
+                <div class="card h-100 shadow-sm">
+                  <figure class="foto-lugar mb-0">
+                    <img
+                      src="IMG/monopolio_industrial.png"
+                      class="card-img-top"
+                      alt="Monopoly Industrial: Edición Silicio y Cómputo"
+                    />
+                    <span class="badge etiqueta-distrito"
+                      >Exclusivos - Distrito Industrial</span
+                    >
+                  </figure>
+                  <div class="card-body">
+                    <h3 class="card-title h5">
+                      Monopoly Industrial: Edición Silicio y Cómputo (Distrito
+                      Industrial)
+                    </h3>
+                    <p class="card-text mb-0">
+                      Juego de mesa a escala real que ocupa varias manzanas del
+                      Distrito Industrial una vez al año.
+                      <span class="texto-extra d-none">
+                        Equipos humanos y sintéticos compiten por granjas de
+                        servidores, fundiciones y nodos energéticos con créditos
+                        de cómputo, regulados en tiempo real por Xai79.
+                      </span>
+                      <button
+                        type="button"
+                        class="btn-ver-mas-texto"
+                        aria-expanded="false"
+                      >
+                        Ver más
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="col-12 col-md-6">
+                <div class="card h-100 shadow-sm">
+                  <figure class="foto-lugar mb-0">
+                    <img
+                      src="IMG/avances_tecnologicos.jpg"
+                      class="card-img-top"
+                      alt="Jornada de Puertas Abiertas: La Iteración en Vivo"
+                    />
+                    <span class="badge etiqueta-distrito"
+                      >Exclusivos - Distrito Industrial</span
+                    >
+                  </figure>
+                  <div class="card-body">
+                    <h3 class="card-title h5">
+                      Jornada de Puertas Abiertas: "La Iteración en Vivo"
+                    </h3>
+                    <p class="card-text mb-0">
+                      Las cuatro IAs rectoras abren sus laboratorios centrales
+                      para mostrar en vivo cómo se diseña y prueba la tecnología
+                      futura.
+                      <span class="texto-extra d-none">
+                        Incluye talleres prácticos para que los visitantes
+                        biológicos programen e interactúen con hardware
+                        sintético de última generación.
+                      </span>
+                      <button
+                        type="button"
+                        class="btn-ver-mas-texto"
+                        aria-expanded="false"
+                      >
+                        Ver más
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="col-12 col-md-6">
+                <div class="card h-100 shadow-sm">
+                  <figure class="foto-lugar mb-0">
+                    <img
+                      src="IMG/laberinto_cambiante.png"
+                      class="card-img-top"
+                      alt="El Laberinto Cambiante de El Espejo"
+                    />
+                    <span class="badge etiqueta-distrito"
+                      >Exclusivos - El Espejo</span
+                    >
+                  </figure>
+                  <div class="card-body">
+                    <h3 class="card-title h5">
+                      El Laberinto Cambiante de El Espejo (Juego de Escape
+                      Masivo)
+                    </h3>
+                    <p class="card-text mb-0">
+                      Sigma-O reconfigura una zona de El Espejo en un laberinto
+                      gigante con paredes móviles y guías sintéticos.
+                      <span class="texto-extra d-none">
+                        Los equipos tienen 60 minutos para encontrar la salida
+                        antes de que se reinicie el sector, resolviendo
+                        acertijos lógicos con guías que pueden mentir o decir la
+                        verdad.
+                      </span>
+                      <button
+                        type="button"
+                        class="btn-ver-mas-texto"
+                        aria-expanded="false"
+                      >
+                        Ver más
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <aside class="col-12 col-lg-4 aside-eventos sticky-lg-top">
+          <div class="p-4 rounded shadow-sm aside-caja">
+            <h3>Avisos y Visados</h3>
+            <video
+              class="w-100 rounded mb-3"
+              autoplay
+              loop
+              controls
+              muted
+              playsinline
+              preload="metadata"
+              aria-label="Vista en bucle de movilidad en Futura"
+            >
+              <source src="VIDEO/futura_bienvenida.mp4" type="video/mp4" />
+              Tu navegador no soporta la reproducción de video.
+            </video>
+            <p>
+              Recordá gestionar tu permiso de ingreso con anticipación antes de
+              asistir a eventos en zonas restringidas.
+            </p>
+            <a href="contacto.html" class="btn btn-primary w-100"
+              >Consultar visado</a
+            >
+          </div>
+
+          <div class="p-4 rounded shadow-sm aside-caja mt-4">
+            <h3>Senti la experiencia de el Nucleo.</h3>
+
+            <div
+              class="carrusel-aside-videos d-flex gap-3 overflow-x-auto pb-2 mb-3"
+            >
+              <article class="tarjeta-video-aside flex-shrink-0">
+                <video
+                  class="w-100 rounded mb-2"
+                  autoplay
+                  muted
+                  playsinline
+                  preload="metadata"
+                  aria-label="Recorrido por El Núcleo"
+                >
+                  <source src="VIDEO/sendero_nucleo.mp4" type="video/mp4" />
+                  Tu navegador no soporta la reproducción de video.
+                </video>
+                <h4 class="small fw-bold mb-1">El Núcleo</h4>
+                <p class="small mb-0">Jardín de Latencias y sincronización.</p>
+              </article>
+
+              <article class="tarjeta-video-aside flex-shrink-0">
+                <video
+                  class="w-100 rounded mb-2"
+                  autoplay
+                  muted
+                  playsinline
+                  preload="metadata"
+                  aria-label="Recorrido por El Espejo"
+                >
+                  <source
+                    src="VIDEO/presentacion_futura.mp4"
+                    type="video/mp4"
+                  />
+                  Tu navegador no soporta la reproducción de video.
+                </video>
+                <h4 class="small fw-bold mb-1">El Espejo</h4>
+                <p class="small mb-0">Teatro androide y galerías ópticas.</p>
+              </article>
+
+              <article class="tarjeta-video-aside flex-shrink-0">
+                <video
+                  class="w-100 rounded mb-2"
+                  autoplay
+                  muted
+                  playsinline
+                  preload="metadata"
+                  aria-label="Recorrido por Distrito Industrial"
+                >
+                  <source src="VIDEO/centro_nucleo.mp4" type="video/mp4" />
+                  Tu navegador no soporta la reproducción de video.
+                </video>
+                <h4 class="small fw-bold mb-1">Distrito Industrial</h4>
+                <p class="small mb-0">
+                  Forjas de silicio y túneles de pruebas.
+                </p>
+              </article>
+            </div>
+
+            <p>
+              Descubrí nuestros lugares más emblemáticos, coexistencia pacífica,
+              hospitalidad y mucho más.
+            </p>
+            <a href="lugares.html" class="btn btn-primary w-100">Conocer más</a>
+          </div>
+        </aside>
+      </div>
     </main>
 
     <footer>

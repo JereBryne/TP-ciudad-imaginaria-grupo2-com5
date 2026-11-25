@@ -396,6 +396,7 @@ footer address a {
   color: #ffffff;
 }
 
+
 /* Acordeón de barrios en ciudad.html */
 .accordion {
   --bs-accordion-bg: transparent;
@@ -439,20 +440,6 @@ footer address a {
   color: var(--color-texto-suave);
 }
 
-/* Cajas y pestañas de eventos.html */
-.evento-caja {
-  background-color: var(--color-superficie);
-  color: var(--color-texto);
-  border: 1px solid var(--color-superficie-borde);
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.evento-caja h2 {
-  color: var(--color-primario);
-}
-
 .nav-pills .nav-link {
   color: var(--color-texto);
   border: 1px solid var(--color-superficie-borde);
@@ -468,4 +455,168 @@ footer address a {
 .nav-pills .nav-link:hover:not(.active) {
   background-color: var(--color-banner-fondo);
   color: var(--color-texto);
+}
+
+/*SECCIÓN EVENTOS (eventos.html)*/
+
+/* 1. Estructura general y encabezados */
+.eventos-main section {
+  padding: 1.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.eventos-main h2,
+.evento-caja h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-primario);
+}
+
+.eventos-main h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--color-primario);
+  font-size: 1.25rem;
+}
+
+/* 2. Barra de navegación interna por secciones */
+.eventos-main .eventos-nav-secciones {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-superficie-borde);
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+}
+
+.eventos-main .eventos-nav-secciones .nav-link {
+  color: var(--color-texto);
+  padding: 0.5rem 0.85rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.eventos-main .eventos-nav-secciones .nav-link:hover,
+.eventos-main .eventos-nav-secciones .nav-link:focus-visible {
+  background-color: var(--color-primario);
+  color: var(--color-header-texto);
+  transform: translateY(-1px);
+}
+
+.eventos-main .eventos-nav-secciones .nav-link.active {
+  background-color: var(--color-acento);
+  color: #ffffff;
+}
+
+/* 3. Cajas contenedoras por distrito */
+.evento-caja {
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  border: 1px solid var(--color-superficie-borde);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 4. Tarjetas de eventos y alineación de contenido */
+.eventos-main article {
+  border: 0;
+  background-color: transparent;
+}
+
+.eventos-main .card {
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  border: 1px solid var(--color-superficie-borde);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.eventos-main figure {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.eventos-main figure img {
+  display: block;
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+  border: 0;
+  border-bottom: 1px solid var(--color-superficie-borde);
+}
+
+.eventos-main .card-body {
+  padding: 1.25rem;
+}
+
+.eventos-main .card-title {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  padding: 0;
+}
+
+.eventos-main .card-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+/* 5. Botón inline "Ver más / Ver menos" */
+.btn-ver-mas-texto {
+  display: inline;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-left: 0.25rem;
+  color: var(--color-primario);
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btn-ver-mas-texto:hover {
+  color: var(--color-acento);
+}
+
+/* 6. Barra lateral (aside) y carrusel de videos */
+.aside-eventos {
+  top: 1rem;
+}
+
+.aside-eventos video {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.aside-caja {
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  border: 1px solid var(--color-superficie-borde);
+}
+
+.carrusel-aside-videos {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+}
+
+.tarjeta-video-aside {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-superficie-borde);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  scroll-snap-align: start;
+}
+
+.tarjeta-video-aside video {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
