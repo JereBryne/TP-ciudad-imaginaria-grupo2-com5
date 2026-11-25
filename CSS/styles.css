@@ -402,14 +402,21 @@ footer address a {
 
 /* 1. Estructura general y encabezados */
 .eventos-main section {
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   margin-bottom: 2rem;
 }
 
 .eventos-main h2,
 .evento-caja h2 {
+  text-align: center;
   margin-bottom: 1rem;
   color: var(--color-primario);
+  
+}
+
+.aside-eventos video {
+  max-height: 300px;
+  object-fit: cover;
 }
 
 .eventos-main h3 {
@@ -491,6 +498,43 @@ footer address a {
   margin-bottom: 0;
   padding: 0;
 }
+
+.eventos-main .card-img-top{
+  border-radius: 10px;
+}
+
+.aside-eventos {
+  top: 1rem;
+  z-index: 10;
+}
+
+.aside-caja {
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  border: 1px solid var(--color-superficie-borde);
+}
+
+/* Tarjetas de video desplazables en el aside */
+.carrusel-aside-videos {
+  scroll-snap-type: x mandatory;
+}
+
+.tarjeta-video-aside {
+  width: 210px;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-superficie-borde);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  scroll-snap-align: start;
+}
+
+.tarjeta-video-aside video {
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
 
 /* 4. Botón inline "Ver más / Ver menos" */
 .btn-ver-mas-texto {
